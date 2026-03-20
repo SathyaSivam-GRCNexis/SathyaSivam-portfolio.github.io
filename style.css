@@ -835,72 +835,11 @@ img { max-width: 100%; display: block; }
 /* === ABOUT === */
 .about__grid {
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 72px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
-.about__image-wrapper {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.about__image-placeholder {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  background: var(--gradient-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 5rem;
-  font-weight: 700;
-  color: var(--accent-teal);
-  opacity: 0.3;
-  position: relative;
-  border-radius: var(--radius);
-  border: 1px solid var(--glass-border);
-}
-
-.about__image-ring {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border: 2px solid var(--accent-teal);
-  border-radius: 50%;
-  opacity: 0.2;
-  animation: ringPulse 3s ease-in-out infinite;
-}
-
-.about__image-glow {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 60px;
-  background: var(--accent-teal);
-  filter: blur(50px);
-  opacity: 0.15;
-}
-
-.about__image-badge {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 50px;
-  backdrop-filter: blur(16px);
-  font-size: 0.78rem;
-  color: var(--accent-teal);
-  margin-top: 16px;
-  width: fit-content;
-}
-
-.about__image-badge i, .about__image-badge svg { width: 14px; height: 14px; }
 
 .about__intro {
   font-size: 1.15rem;
@@ -2635,8 +2574,8 @@ img { max-width: 100%; display: block; }
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .about__grid {
-    grid-template-columns: 280px 1fr;
-    gap: 48px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .about__cards {
@@ -2719,11 +2658,6 @@ img { max-width: 100%; display: block; }
   .about__grid {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .about__image {
-    max-width: 260px;
-    margin: 0 auto;
   }
 
   .about__cards { grid-template-columns: 1fr; }

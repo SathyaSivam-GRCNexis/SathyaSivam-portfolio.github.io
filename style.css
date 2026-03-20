@@ -317,8 +317,8 @@ img { max-width: 100%; display: block; }
 }
 
 .nav__logo-shield {
-  width: 28px;
-  height: 32px;
+  width: 38px;
+  height: 42px;
   color: var(--accent-teal);
   transition: var(--transition);
 }
@@ -328,17 +328,17 @@ img { max-width: 100%; display: block; }
 .nav__logo-text {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   letter-spacing: -0.02em;
 }
 
 .nav__logo-dot {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--accent-teal);
   border-radius: 50%;
-  margin-left: 2px;
+  margin-left: 3px;
   vertical-align: super;
 }
 
@@ -1416,6 +1416,47 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   border-radius: 50px;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--accent-teal);
+  background: rgba(45, 212, 191, 0.06);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-card__link:hover {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.4);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.project-card__link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.project-card__link--private {
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border);
+}
+
+.project-card__link--private:hover {
+  color: var(--accent-teal);
+  background: rgba(45, 212, 191, 0.06);
+  border-color: rgba(45, 212, 191, 0.2);
 }
 
 /* === EDUCATION === */

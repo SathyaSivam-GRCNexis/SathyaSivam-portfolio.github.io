@@ -353,34 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === CONTACT FORM ===
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const btn = this.querySelector('button[type="submit"]');
-      const btnSpan = btn.querySelector('span');
-      const originalText = btnSpan.textContent;
-
-      btnSpan.textContent = 'Sending...';
-      btn.disabled = true;
-      btn.style.opacity = '0.7';
-
-      setTimeout(() => {
-        btnSpan.textContent = 'Message Sent!';
-        btn.style.opacity = '1';
-        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-
-        setTimeout(() => {
-          contactForm.reset();
-          btnSpan.textContent = originalText;
-          btn.disabled = false;
-          btn.style.background = '';
-        }, 2500);
-      }, 1500);
-    });
-  }
-
   // === PARALLAX ON HERO ORBS ===
   if (window.innerWidth > 768) {
     const orbs = document.querySelectorAll('.hero__orb');

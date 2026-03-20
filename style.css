@@ -2419,6 +2419,48 @@ img { max-width: 100%; display: block; }
   min-height: 120px;
 }
 
+.contact__form-status {
+  margin-top: 16px;
+}
+
+.form-status--success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--accent-teal);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.form-status--success svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.form-status--error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-sm);
+  color: #ef4444;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.form-status--error svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* === FOOTER === */
 .footer {
   padding: 48px 0 32px;

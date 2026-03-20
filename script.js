@@ -413,4 +413,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === CONTACT FORM (Formspree AJAX) ===
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Update button to loading state
+      const btnText = submitBtn.querySelector('span');
+      const originalText = btnText.textContent;
+      btnText.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          formStatus.innerHTML = '<div class="form-status--success"><i data-lucide="check-circle"></i> Message sent successfully! I\'ll get back to you within 24 hours.</div>';
+          contactForm.reset();
+          lucide.createIcons();
+        } else {
+          const data = await response.json();
+          const errorMsg = data.errors ? data.errors.map(err => err.message).join(', ') : 'Something went wrong.';
+          formStatus.innerHTML = `<div class="form-status--error"><i data-lucide="alert-circle"></i> ${errorMsg} Please try emailing me directly.</div>`;
+          lucide.createIcons();
+        }
+      } catch (error) {
+        formStatus.innerHTML = '<div class="form-status--error"><i data-lucide="alert-circle"></i> Network error. Please try emailing me directly at sathyasivam.ps@gmail.com</div>';
+        lucide.createIcons();
+      }
+
+      // Reset button
+      btnText.textContent = originalText;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+    });
+  }
+
 });

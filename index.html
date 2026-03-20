@@ -1489,21 +1489,21 @@
 
         <div class="contact__form glass-card" data-reveal>
           <h3 class="contact__form-title">Send a Message</h3>
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form__row">
               <div class="form__group">
                 <label>
                   <i data-lucide="user"></i>
                   Name
                 </label>
-                <input type="text" placeholder="Your full name" required>
+                <input type="text" name="name" placeholder="Your full name" required>
               </div>
               <div class="form__group">
                 <label>
                   <i data-lucide="mail"></i>
                   Email
                 </label>
-                <input type="email" placeholder="your@email.com" required>
+                <input type="email" name="email" placeholder="your@email.com" required>
               </div>
             </div>
             <div class="form__group">
@@ -1511,14 +1511,15 @@
                 <i data-lucide="tag"></i>
                 Subject
               </label>
-              <select required>
+              <select name="subject" required>
                 <option value="" disabled selected>Select a topic</option>
-                <option value="mentoring">GRC Mentoring</option>
-                <option value="consulting">Compliance Consulting</option>
-                <option value="audit">Audit Guidance</option>
-                <option value="career">Career Advice</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="other">Other</option>
+                <option value="GRC Mentoring">GRC Mentoring</option>
+                <option value="Compliance Consulting">Compliance Consulting</option>
+                <option value="Audit Guidance">Audit Guidance</option>
+                <option value="Career Advice">Career Advice</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Project Documentation Request">Project Documentation Request</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div class="form__group">
@@ -1526,13 +1527,14 @@
                 <i data-lucide="message-square"></i>
                 Message
               </label>
-              <textarea placeholder="Tell me about your question or how I can help..." rows="5" required></textarea>
+              <textarea name="message" placeholder="Tell me about your question or how I can help..." rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full">
+            <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">
               <span>Send Message</span>
               <i data-lucide="send"></i>
             </button>
           </form>
+          <div class="contact__form-status" id="formStatus"></div>
         </div>
       </div>
     </div>

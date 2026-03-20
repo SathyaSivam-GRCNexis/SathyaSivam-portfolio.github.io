@@ -217,11 +217,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedEl = document.getElementById('heroTyped');
   if (typedEl) {
     const phrases = [
-      'Specializing in GDPR & CCPA compliance.',
-      'Building privacy-first cultures.',
-      'Risk assessment & mitigation expert.',
-      'Making compliance a competitive advantage.',
-      'Turning regulations into opportunities.'
+      'Building compliance tools that actually work.',
+      'Turning frameworks into actionable controls.',
+      'Bridging the gap between policy and product.',
+      'Making GRC feel less like a checkbox.',
+      'Bringing the ocean to the table — one wave at a time.'
     ];
 
     let phraseIndex = 0;

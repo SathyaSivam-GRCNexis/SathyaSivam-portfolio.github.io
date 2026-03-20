@@ -217,11 +217,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedEl = document.getElementById('heroTyped');
   if (typedEl) {
     const phrases = [
-      'Building compliance tools that actually work.',
-      'Turning frameworks into actionable controls.',
-      'Bridging the gap between policy and product.',
-      'Making GRC feel less like a checkbox.',
-      'Bringing the ocean to the table — one wave at a time.'
+      'What risk did you identify and how did you reduce it?',
+      'Mapping controls across ISO 27001, SOC 2, and GDPR.',
+      'Building audit-ready processes, not just documentation.',
+      'Risk-first thinking. Business-aligned compliance.',
+      'From gap analysis to remediation — end to end.'
     ];
 
     let phraseIndex = 0;

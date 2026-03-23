@@ -79,7 +79,7 @@
         <a href="#projects" class="nav__link">Projects</a>
         <a href="#case-studies" class="nav__link">Case Studies</a>
         <a href="#artifacts" class="nav__link">Artifacts</a>
-        <a href="#blog" class="nav__link">Insights</a>
+        <a href="#blog" class="nav__link">Publications</a>
         <a href="#contact" class="nav__link nav__link--cta">
           <i data-lucide="send" class="nav__cta-icon"></i>
           Contact
@@ -1257,144 +1257,61 @@
     </div>
   </section>
 
-  <!-- ============ BLOG / INSIGHTS ============ -->
+  <!-- ============ BLOG / PUBLICATIONS ============ -->
   <section class="section" id="blog">
     <div class="container">
       <div class="section__header" data-reveal>
-        <span class="section__tag"><i data-lucide="pen-tool"></i> Insights & Thought Leadership</span>
-        <h2 class="section__title">What I <span class="gradient-text">Write About</span></h2>
-        <p class="section__subtitle">Risk-focused thinking on compliance, security, and GRC — for practitioners who want clarity, not checklists.</p>
+        <span class="section__tag"><i data-lucide="rss"></i> Where I Publish</span>
+        <h2 class="section__title">Read My <span class="gradient-text">Writing</span></h2>
+        <p class="section__subtitle">GRC insights, audit breakdowns, and compliance thinking — published on LinkedIn and Substack.</p>
       </div>
 
-      <!-- Thought Leadership Articles -->
-      <div class="insights__list">
-        <details class="insight-item glass-card" data-reveal>
-          <summary class="insight-item__summary">
-            <span class="insight-item__number">01</span>
-            <div class="insight-item__header">
-              <h3 class="insight-item__title">The 5 Risk Categories Every SaaS Platform Should Track</h3>
-              <p class="insight-item__excerpt">Most SaaS companies track technical risks. But vendor, legal, and business risks are where the real exposure lives.</p>
-            </div>
-            <span class="insight-item__toggle">
-              <i data-lucide="chevron-down"></i>
-            </span>
-          </summary>
-          <div class="insight-item__content">
-            <p>When I conducted an enterprise risk assessment for a SaaS platform managing compliance across 8 frameworks, I organized risks into 5 categories — and it changed how the organization prioritized mitigation:</p>
-            <ul>
-              <li><strong>Engineering risks:</strong> Technical vulnerabilities — privilege escalation, weak encryption, insufficient input validation. These are the risks most teams focus on, but they're only one piece.</li>
-              <li><strong>Operational risks:</strong> Process failures — no segregation of duties, evidence not collected on time, stale risk assessments not reassessed in 90+ days.</li>
-              <li><strong>Vendor risks:</strong> Third-party integrations connected without security review. Marketing tools, analytics platforms, and plugins accessing customer data without documented data flow mapping.</li>
-              <li><strong>Legal & Regulatory risks:</strong> Data residency violations, GDPR cross-border transfer exposure, SEBI compliance gaps. These are the risks that create regulatory penalties, not just audit findings.</li>
-              <li><strong>Business risks:</strong> Revenue impact from compliance failures, customer trust erosion, inability to enter new markets without required certifications.</li>
-            </ul>
-            <p>Using a 5x5 scoring matrix (Likelihood x Impact = 1-25) with 5 severity levels (Critical through Negligible), each risk gets a consistent, comparable score. The heat map shows leadership where the concentration of risk lives — and residual risk tracking confirms whether mitigations are actually working.</p>
-          </div>
-        </details>
-
-        <details class="insight-item glass-card" data-reveal>
-          <summary class="insight-item__summary">
-            <span class="insight-item__number">02</span>
-            <div class="insight-item__header">
-              <h3 class="insight-item__title">6 Types of Compliance Gaps That Auditors Will Find Before You Do</h3>
-              <p class="insight-item__excerpt">If you're only looking for "not implemented" controls, you're missing 5 other gap types that auditors won't overlook.</p>
-            </div>
-            <span class="insight-item__toggle">
-              <i data-lucide="chevron-down"></i>
-            </span>
-          </summary>
-          <div class="insight-item__content">
-            <p>When I designed a gap assessment methodology for a SaaS platform with 149 controls across 8 frameworks, I identified 6 distinct gap types — most organizations only check for one:</p>
-            <ul>
-              <li><strong>Missing Implementation:</strong> The obvious one — control status is "Not Implemented" or "Planned." Of 149 controls, 33 fell into this category.</li>
-              <li><strong>Missing Evidence:</strong> Control is marked "Implemented" but no evidence records are linked. Without evidence, the control doesn't exist for audit purposes.</li>
-              <li><strong>Partial Coverage:</strong> Control is partially implemented — some aspects are in place but not all. 30 controls were in this state.</li>
-              <li><strong>Expired Evidence:</strong> Evidence exists but has passed its validity period. This creates a false sense of readiness — the control may no longer be effective.</li>
-              <li><strong>No Owner:</strong> No DRI (Directly Responsible Individual) assigned to the control. Without ownership, there's no accountability for evidence collection or remediation.</li>
-              <li><strong>No Documentation:</strong> No policy or procedure documentation linked. The control may be working in practice but isn't documented — an audit finding waiting to happen.</li>
-            </ul>
-            <p>Each gap gets a severity rating (Critical, High, Medium, Low) and enters a remediation workflow: Open → In Progress → Remediated → Closed, with SLA tracking on every status change. Comparing assessments over time shows whether you're actually improving — or just finding the same gaps each cycle.</p>
-          </div>
-        </details>
-
-        <details class="insight-item glass-card" data-reveal>
-          <summary class="insight-item__summary">
-            <span class="insight-item__number">03</span>
-            <div class="insight-item__header">
-              <h3 class="insight-item__title">Why Cross-Framework Control Mapping Fails — and How 175 Mappings Changed Our Approach</h3>
-              <p class="insight-item__excerpt">Control mapping should save time. In practice, it often creates more confusion. Here's what actually works.</p>
-            </div>
-            <span class="insight-item__toggle">
-              <i data-lucide="chevron-down"></i>
-            </span>
-          </summary>
-          <div class="insight-item__content">
-            <p>When managing compliance across 8 frameworks simultaneously, we needed cross-framework control mapping. Here's what I learned creating 175 mappings across SOC 2, ISO 27001, GDPR, HIPAA, and ISO 27701:</p>
-            <ul>
-              <li><strong>Not all overlaps are equal:</strong> ISO 27001 A.5.15 (Access Control) and SOC 2 CC6.1 (Logical Access) overlap — but they're not equivalent. We classified relationships into 3 types: Equivalent, Partial Overlap, and Related. Treating everything as "the same" creates false coverage.</li>
-              <li><strong>Evidence requirements differ even when controls map:</strong> Two frameworks may accept the same control, but require different evidence. GDPR Art. 32 needs documented technical measures; SOC 2 CC6.1 needs access control configuration screenshots. Map the evidence, not just the control.</li>
-              <li><strong>Bidirectional mapping is essential:</strong> If ISO 27001 A.5.15 maps to SOC 2 CC6.1, the reverse must also be true. We normalized all 175 mappings to work in both directions — so auditors can start from any framework and see full coverage.</li>
-              <li><strong>Static spreadsheets are the enemy:</strong> Control maps built in Excel and shared via email have no version control, no ownership, and no update triggers when frameworks change. The mappings must live in a system that tracks status in real time.</li>
-              <li><strong>Mapping without risk context is incomplete:</strong> Controls mapped to frameworks but not to the risks they mitigate. Without risk context, there's no way to prioritize which gaps in mapping matter most.</li>
-            </ul>
-            <p>The result: a single evidence submission can satisfy multiple framework requirements, audit preparation covers all 8 frameworks simultaneously, and the mapping stays current — not a snapshot from six months ago.</p>
-          </div>
-        </details>
-      </div>
-
-      <!-- Blog Platforms -->
-      <div class="blog__platforms" data-reveal>
-        <h3 class="blog__platforms-title">
-          <i data-lucide="rss"></i>
-          Where I Publish
-        </h3>
-        <div class="blog__grid">
-          <!-- Newsletter -->
-          <div class="blog-card glass-card" data-reveal>
-            <div class="blog-card__image">
-              <div class="blog-card__image-placeholder">
-                <i data-lucide="newspaper"></i>
-              </div>
-            </div>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <span class="blog-card__category">Newsletter</span>
-                <span class="blog-card__date">
-                  <i data-lucide="calendar"></i>
-                  Ongoing
-                </span>
-              </div>
-              <h3 class="blog-card__title">The Unwritten Rules of GRC</h3>
-              <p class="blog-card__excerpt">A LinkedIn newsletter breaking down why controls exist, how audits work in practice, and how organizations build trust through effective compliance.</p>
-              <a href="https://www.linkedin.com/newsletters/the-unwritten-rules-of-grc-7419717856528850944/" target="_blank" class="blog-card__link">
-                Subscribe on LinkedIn
-                <i data-lucide="arrow-right"></i>
-              </a>
+      <div class="blog__grid">
+        <!-- Newsletter -->
+        <div class="blog-card glass-card" data-reveal>
+          <div class="blog-card__image">
+            <div class="blog-card__image-placeholder">
+              <i data-lucide="newspaper"></i>
             </div>
           </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">Newsletter</span>
+              <span class="blog-card__date">
+                <i data-lucide="calendar"></i>
+                Ongoing
+              </span>
+            </div>
+            <h3 class="blog-card__title">The Unwritten Rules of GRC</h3>
+            <p class="blog-card__excerpt">A LinkedIn newsletter breaking down why controls exist, how audits work in practice, and how organizations build trust through effective compliance.</p>
+            <a href="https://www.linkedin.com/newsletters/the-unwritten-rules-of-grc-7419717856528850944/" target="_blank" class="blog-card__link">
+              Subscribe on LinkedIn
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-          <!-- Substack -->
-          <div class="blog-card glass-card" data-reveal>
-            <div class="blog-card__image">
-              <div class="blog-card__image-placeholder">
-                <i data-lucide="rss"></i>
-              </div>
+        <!-- Substack -->
+        <div class="blog-card glass-card" data-reveal>
+          <div class="blog-card__image">
+            <div class="blog-card__image-placeholder">
+              <i data-lucide="rss"></i>
             </div>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <span class="blog-card__category">GRCNexis</span>
-                <span class="blog-card__date">
-                  <i data-lucide="calendar"></i>
-                  2025
-                </span>
-              </div>
-              <h3 class="blog-card__title">GRCNexis on Substack</h3>
-              <p class="blog-card__excerpt">Long-form articles on governance, risk, and compliance — written to make complex frameworks accessible. From audit walkthroughs to control design thinking.</p>
-              <a href="https://grcnexis.substack.com" target="_blank" class="blog-card__link">
-                Read on Substack
-                <i data-lucide="arrow-right"></i>
-              </a>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">GRCNexis</span>
+              <span class="blog-card__date">
+                <i data-lucide="calendar"></i>
+                2025
+              </span>
             </div>
+            <h3 class="blog-card__title">GRCNexis on Substack</h3>
+            <p class="blog-card__excerpt">Long-form articles on governance, risk, and compliance — written to make complex frameworks accessible. From audit walkthroughs to control design thinking.</p>
+            <a href="https://grcnexis.substack.com" target="_blank" class="blog-card__link">
+              Read on Substack
+              <i data-lucide="arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>

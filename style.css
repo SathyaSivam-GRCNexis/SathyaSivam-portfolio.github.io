@@ -1633,7 +1633,8 @@ img { max-width: 100%; display: block; }
   transform-style: preserve-3d;
 }
 
-.cert-flip:hover .cert-flip__inner {
+.cert-flip:hover .cert-flip__inner,
+.cert-flip--active .cert-flip__inner {
   transform: rotateY(180deg);
 }
 
@@ -2452,7 +2453,22 @@ img { max-width: 100%; display: block; }
 
   .hero__stat { padding: 16px 12px; }
 
-  .cert-flip { height: 82px; }
+  .cert-flip { height: 100px; }
+  .cert-flip__back {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 12px 16px;
+  }
+
+  /* Hero badge */
+  .hero__badge { font-size: 0.68rem; padding: 6px 14px; }
+
+  /* Scroll indicator */
+  .hero__scroll-indicator { display: none; }
+
+  /* Case study number */
+  .case-study__number { font-size: 2rem; }
+  .case-study__title { font-size: 1.05rem; }
 
   /* About */
   .about__grid {
@@ -2504,11 +2520,28 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --section-padding: 80px 0;
+  }
+
+  .hero { padding: 100px 20px 60px; }
+  .hero__badge { font-size: 0.62rem; padding: 5px 12px; text-align: center; line-height: 1.5; }
   .hero__title-word { font-size: 2.5rem; }
   .hero__stat-number { font-size: 1.8rem; }
+  .hero__stats { gap: 10px; }
+  .hero__stat { padding: 14px 10px; }
 
   .certifications__grid { grid-template-columns: 1fr; }
-  .cert-flip { height: 80px; }
+  .cert-flip { height: auto; min-height: 80px; }
+  .cert-flip__front { position: relative; }
+  .cert-flip__back {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 10px 14px;
+  }
+
+  .case-study { padding: 18px; }
+  .case-study__number { font-size: 1.6rem; }
 
   .project-card { padding: 24px; }
   .project-card__results { flex-direction: column; gap: 16px; }
@@ -2517,6 +2550,8 @@ img { max-width: 100%; display: block; }
   .timeline__line { display: none; }
   .timeline__marker { display: none; }
   .timeline__item { padding-left: 0; }
+
+  .container { padding: 0 20px; }
 
   /* Insights accordion extra-small */
   .insight-item__summary { padding: 16px; gap: 12px; }

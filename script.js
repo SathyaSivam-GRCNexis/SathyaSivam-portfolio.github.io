@@ -385,6 +385,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === CERT FLIP CARDS — TOUCH SUPPORT ===
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    const certFlips = document.querySelectorAll('.cert-flip');
+    certFlips.forEach(card => {
+      card.addEventListener('click', () => {
+        // Close other open cards
+        certFlips.forEach(other => {
+          if (other !== card) other.classList.remove('cert-flip--active');
+        });
+        card.classList.toggle('cert-flip--active');
+      });
+    });
+  }
+
   // === CONTACT FORM (Formspree AJAX) ===
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');

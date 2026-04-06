@@ -156,22 +156,23 @@
       </div>
 
       <div class="hero__stats">
-        <div class="hero__stat">
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="calendar"></i></div>
           <span class="hero__stat-number" data-count="4">0</span>
           <span class="hero__stat-label">Years<br>Experience</span>
         </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat">
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="search"></i></div>
           <span class="hero__stat-number" data-count="40">0</span>
           <span class="hero__stat-label">Audits<br>Led & Conducted</span>
         </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat">
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="layers"></i></div>
           <span class="hero__stat-number" data-count="11">0</span>
           <span class="hero__stat-label">Frameworks<br>Worked With</span>
         </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat">
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="award"></i></div>
           <span class="hero__stat-number" data-count="7">0</span>
           <span class="hero__stat-label">Professional<br>Certifications</span>
         </div>
@@ -225,6 +226,38 @@
       </div>
     </div>
   </div>
+
+  <!-- ============ FRAMEWORK WHEEL ============ -->
+  <section class="section framework-wheel-section" id="framework-wheel">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="globe"></i> Compliance Coverage</span>
+        <h2 class="section__title">11 Frameworks. <span class="gradient-text">One Analyst.</span></h2>
+        <p class="section__subtitle">Compliance coverage across international security, privacy, cloud, quality, and continuity standards.</p>
+      </div>
+      <div class="fw-wheel" data-reveal>
+        <div class="fw-wheel__orbit fw-wheel__orbit--inner">
+          <div class="fw-wheel__node" style="--i:0; --total:4" data-label="SOC 2"><span>SOC 2</span></div>
+          <div class="fw-wheel__node" style="--i:1; --total:4" data-label="ISO 27001"><span>ISO 27001</span></div>
+          <div class="fw-wheel__node" style="--i:2; --total:4" data-label="GDPR"><span>GDPR</span></div>
+          <div class="fw-wheel__node" style="--i:3; --total:4" data-label="HIPAA"><span>HIPAA</span></div>
+        </div>
+        <div class="fw-wheel__orbit fw-wheel__orbit--outer">
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:0; --total:7" data-label="ISO 27701"><span>27701</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:1; --total:7" data-label="ISO 27017"><span>27017</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:2; --total:7" data-label="ISO 27018"><span>27018</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:3; --total:7" data-label="ISO 9001"><span>9001</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:4; --total:7" data-label="ISO 22301"><span>22301</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:5; --total:7" data-label="ENS"><span>ENS</span></div>
+          <div class="fw-wheel__node fw-wheel__node--sm" style="--i:6; --total:7" data-label="CSA STAR"><span>CSA</span></div>
+        </div>
+        <div class="fw-wheel__center">
+          <span class="fw-wheel__center-number">371</span>
+          <span class="fw-wheel__center-label">Controls</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ ABOUT ============ -->
   <section class="section" id="about">
@@ -329,12 +362,12 @@
           </div>
           <h3 class="skill-card__title">Privacy & Data Protection</h3>
           <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> GDPR Implementation & Compliance</li>
-            <li><span class="skill-card__bullet"></span> HIPAA Security & Privacy Rules</li>
-            <li><span class="skill-card__bullet"></span> Privacy Impact Assessments (PIA/DPIA)</li>
-            <li><span class="skill-card__bullet"></span> Data Mapping & Flow Analysis</li>
-            <li><span class="skill-card__bullet"></span> SEBI Regulatory Compliance</li>
-            <li><span class="skill-card__bullet"></span> DPDPA (India) Compliance</li>
+            <li><span class="skill-card__bullet"></span> GDPR Implementation & Compliance <span class="skill-bar" data-level="92"></span></li>
+            <li><span class="skill-card__bullet"></span> HIPAA Security & Privacy Rules <span class="skill-bar" data-level="88"></span></li>
+            <li><span class="skill-card__bullet"></span> Privacy Impact Assessments (PIA/DPIA) <span class="skill-bar" data-level="85"></span></li>
+            <li><span class="skill-card__bullet"></span> Data Mapping & Flow Analysis <span class="skill-bar" data-level="80"></span></li>
+            <li><span class="skill-card__bullet"></span> SEBI Regulatory Compliance <span class="skill-bar" data-level="78"></span></li>
+            <li><span class="skill-card__bullet"></span> DPDPA (India) Compliance <span class="skill-bar" data-level="82"></span></li>
           </ul>
         </div>
 
@@ -345,12 +378,12 @@
           </div>
           <h3 class="skill-card__title">Risk Management</h3>
           <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> Enterprise Risk Assessments</li>
-            <li><span class="skill-card__bullet"></span> Gap Analysis & Remediation</li>
-            <li><span class="skill-card__bullet"></span> Risk Register Development</li>
-            <li><span class="skill-card__bullet"></span> Incident Management & Response</li>
-            <li><span class="skill-card__bullet"></span> Risk Scoring & Quantification (5x5 Matrix)</li>
-            <li><span class="skill-card__bullet"></span> Mitigation & Residual Risk Tracking</li>
+            <li><span class="skill-card__bullet"></span> Enterprise Risk Assessments <span class="skill-bar" data-level="95"></span></li>
+            <li><span class="skill-card__bullet"></span> Gap Analysis & Remediation <span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-card__bullet"></span> Risk Register Development <span class="skill-bar" data-level="92"></span></li>
+            <li><span class="skill-card__bullet"></span> Incident Management & Response <span class="skill-bar" data-level="85"></span></li>
+            <li><span class="skill-card__bullet"></span> Risk Scoring & Quantification (5x5 Matrix) <span class="skill-bar" data-level="93"></span></li>
+            <li><span class="skill-card__bullet"></span> Mitigation & Residual Risk Tracking <span class="skill-bar" data-level="88"></span></li>
           </ul>
         </div>
 
@@ -361,15 +394,15 @@
           </div>
           <h3 class="skill-card__title">Governance & Compliance</h3>
           <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> ISO 27001 / 27701 Implementation & Auditing</li>
-            <li><span class="skill-card__bullet"></span> ISO 27017 / 27018 Cloud & PII Protection</li>
-            <li><span class="skill-card__bullet"></span> SOC 2 Audit Support</li>
-            <li><span class="skill-card__bullet"></span> ISO 9001 Quality Management</li>
-            <li><span class="skill-card__bullet"></span> BCMS (Business Continuity Management)</li>
-            <li><span class="skill-card__bullet"></span> CSA STAR Cloud Security</li>
-            <li><span class="skill-card__bullet"></span> Policy & Procedure Development</li>
-            <li><span class="skill-card__bullet"></span> Internal & External Audit Management</li>
-            <li><span class="skill-card__bullet"></span> Control Mapping Across Frameworks</li>
+            <li><span class="skill-card__bullet"></span> ISO 27001 / 27701 Implementation & Auditing <span class="skill-bar" data-level="95"></span></li>
+            <li><span class="skill-card__bullet"></span> ISO 27017 / 27018 Cloud & PII Protection <span class="skill-bar" data-level="82"></span></li>
+            <li><span class="skill-card__bullet"></span> SOC 2 Audit Support <span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-card__bullet"></span> ISO 9001 Quality Management <span class="skill-bar" data-level="85"></span></li>
+            <li><span class="skill-card__bullet"></span> BCMS (Business Continuity Management) <span class="skill-bar" data-level="78"></span></li>
+            <li><span class="skill-card__bullet"></span> CSA STAR Cloud Security <span class="skill-bar" data-level="80"></span></li>
+            <li><span class="skill-card__bullet"></span> Policy & Procedure Development <span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-card__bullet"></span> Internal & External Audit Management <span class="skill-bar" data-level="92"></span></li>
+            <li><span class="skill-card__bullet"></span> Control Mapping Across Frameworks <span class="skill-bar" data-level="93"></span></li>
           </ul>
         </div>
 
@@ -380,12 +413,12 @@
           </div>
           <h3 class="skill-card__title">AI & Compliance Innovation</h3>
           <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> AI-Assisted Compliance Workflows</li>
-            <li><span class="skill-card__bullet"></span> Evidence Quality Scoring & Classification</li>
-            <li><span class="skill-card__bullet"></span> Anomaly Detection in Compliance Data</li>
-            <li><span class="skill-card__bullet"></span> AI Security & Risk (CAISR Certified)</li>
-            <li><span class="skill-card__bullet"></span> Audit Readiness Scoring</li>
-            <li><span class="skill-card__bullet"></span> ISO 42001 AI Management Systems</li>
+            <li><span class="skill-card__bullet"></span> AI-Assisted Compliance Workflows <span class="skill-bar" data-level="80"></span></li>
+            <li><span class="skill-card__bullet"></span> Evidence Quality Scoring & Classification <span class="skill-bar" data-level="88"></span></li>
+            <li><span class="skill-card__bullet"></span> Anomaly Detection in Compliance Data <span class="skill-bar" data-level="75"></span></li>
+            <li><span class="skill-card__bullet"></span> AI Security & Risk (CAISR Certified) <span class="skill-bar" data-level="82"></span></li>
+            <li><span class="skill-card__bullet"></span> Audit Readiness Scoring <span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-card__bullet"></span> ISO 42001 AI Management Systems <span class="skill-bar" data-level="78"></span></li>
           </ul>
         </div>
 
@@ -396,12 +429,12 @@
           </div>
           <h3 class="skill-card__title">Leadership & Communication</h3>
           <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> GRC Thought Leadership & Writing</li>
-            <li><span class="skill-card__bullet"></span> 1:1 Mentoring & Career Guidance</li>
-            <li><span class="skill-card__bullet"></span> Stakeholder Communication</li>
-            <li><span class="skill-card__bullet"></span> Training & Awareness Programs</li>
-            <li><span class="skill-card__bullet"></span> Cross-Functional Collaboration</li>
-            <li><span class="skill-card__bullet"></span> Compliance Awareness & Training Delivery</li>
+            <li><span class="skill-card__bullet"></span> GRC Thought Leadership & Writing <span class="skill-bar" data-level="88"></span></li>
+            <li><span class="skill-card__bullet"></span> 1:1 Mentoring & Career Guidance <span class="skill-bar" data-level="85"></span></li>
+            <li><span class="skill-card__bullet"></span> Stakeholder Communication <span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-card__bullet"></span> Training & Awareness Programs <span class="skill-bar" data-level="87"></span></li>
+            <li><span class="skill-card__bullet"></span> Cross-Functional Collaboration <span class="skill-bar" data-level="92"></span></li>
+            <li><span class="skill-card__bullet"></span> Compliance Awareness & Training Delivery <span class="skill-bar" data-level="85"></span></li>
           </ul>
         </div>
       </div>
@@ -413,74 +446,102 @@
           Professional Certifications
         </h3>
         <div class="certifications__grid">
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/bsi.svg" alt="BSI" />
-            </div>
-            <div>
-              <strong>ISO/IEC 27001:2022 Lead Auditor</strong>
-              <p>CQI and IRCA Certified — BSI</p>
-            </div>
-          </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/mastermind.svg" alt="Mastermind" />
-            </div>
-            <div>
-              <strong>ISO/IEC 42001:2023 Lead Auditor</strong>
-              <p>AI Management Systems — Mastermind</p>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/bsi.svg" alt="BSI" /></div>
+                <div><strong>ISO/IEC 27001:2022 Lead Auditor</strong><p>CQI and IRCA Certified — BSI</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>BSI Group</strong></div>
+                <div class="cert-flip__detail"><span>Scheme</span><strong>CQI-IRCA Certified</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
             </div>
           </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/bsi.svg" alt="BSI" />
-            </div>
-            <div>
-              <strong>CSA STAR Lead Auditor</strong>
-              <p>Trained — BSI Training Academy</p>
-            </div>
-          </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/red-team-leaders.svg" alt="Red Team Leaders" />
-            </div>
-            <div>
-              <strong>CAISR</strong>
-              <p>Certified AI Security & Risk — Red Team Leaders</p>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/mastermind.svg" alt="Mastermind" /></div>
+                <div><strong>ISO/IEC 42001:2023 Lead Auditor</strong><p>AI Management Systems — Mastermind</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>Mastermind</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 42001:2023</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>AI Management Systems</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
             </div>
           </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/tuv-sud.svg" alt="TÜV SÜD" />
-            </div>
-            <div>
-              <strong>ISO/IEC 27001:2022 Internal Auditor</strong>
-              <p>Information Security — TÜV SÜD</p>
-            </div>
-          </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/tuv-sud.svg" alt="TÜV SÜD" />
-            </div>
-            <div>
-              <strong>ISO 9001:2015 Internal Auditor</strong>
-              <p>Quality Management — TÜV SÜD</p>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/bsi.svg" alt="BSI" /></div>
+                <div><strong>CSA STAR Lead Auditor</strong><p>Trained — BSI Training Academy</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>BSI Training Academy</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>CSA STAR</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Cloud Security Assurance</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
             </div>
           </div>
-          <div class="cert-badge glass-card">
-            <div class="cert-badge__shimmer"></div>
-            <div class="cert-badge__logo">
-              <img src="assets/logos/dpdpa.svg" alt="DPDPA" />
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/red-team-leaders.svg" alt="Red Team Leaders" /></div>
+                <div><strong>CAISR</strong><p>Certified AI Security & Risk — Red Team Leaders</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>Red Team Leaders</strong></div>
+                <div class="cert-flip__detail"><span>Certification</span><strong>CAISR</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>AI Security & Risk</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
+              </div>
             </div>
-            <div>
-              <strong>DPDPA Certified</strong>
-              <p>Digital Personal Data Protection Act — India</p>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/tuv-sud.svg" alt="TÜV SÜD" /></div>
+                <div><strong>ISO/IEC 27001:2022 Internal Auditor</strong><p>Information Security — TÜV SÜD</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Information Security</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/tuv-sud.svg" alt="TÜV SÜD" /></div>
+                <div><strong>ISO 9001:2015 Internal Auditor</strong><p>Quality Management — TÜV SÜD</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO 9001:2015</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Quality Management</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <div class="cert-badge__logo"><img src="assets/logos/dpdpa.svg" alt="DPDPA" /></div>
+                <div><strong>DPDPA Certified</strong><p>Digital Personal Data Protection Act — India</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Regulation</span><strong>DPDPA 2023</strong></div>
+                <div class="cert-flip__detail"><span>Jurisdiction</span><strong>India</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Personal Data Protection</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
+              </div>
             </div>
           </div>
         </div>
@@ -828,8 +889,8 @@
       </div>
 
       <!-- Case Study 1 -->
-      <div class="case-study glass-card" data-reveal>
-        <div class="case-study__header">
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
           <span class="case-study__number">01</span>
           <div>
             <h3 class="case-study__title">Enterprise Risk Assessment for a Multi-Framework SaaS Platform</h3>
@@ -839,7 +900,9 @@
               <span>SaaS</span>
             </div>
           </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
         </div>
+        <div class="case-study__body">
         <div class="case-study__grid">
           <div class="case-study__block">
             <h4><i data-lucide="info"></i> Context</h4>
@@ -877,11 +940,12 @@
             <p>Established a structured risk register covering all 5 risk categories with consistent scoring across the platform. Each risk has an assigned owner, documented mitigation plan, and residual risk tracking. Automated weekly reassessment ensures no risk goes stale. The 5x5 heat map provides auditors and leadership with clear visibility into the platform's risk posture — moving risk management from reactive audit findings to proactive, scored, and tracked governance.</p>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Case Study 2 -->
-      <div class="case-study glass-card" data-reveal>
-        <div class="case-study__header">
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
           <span class="case-study__number">02</span>
           <div>
             <h3 class="case-study__title">ISO 27001 & SOC 2 Gap Assessment for SaaS Platform</h3>
@@ -891,7 +955,9 @@
               <span>Gap Analysis</span>
             </div>
           </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
         </div>
+        <div class="case-study__body">
         <div class="case-study__grid">
           <div class="case-study__block">
             <h4><i data-lucide="info"></i> Context</h4>
@@ -928,11 +994,12 @@
             <p>Established a repeatable gap assessment process across all 11 frameworks. Of the 371 controls, 90 are fully implemented, 133 are partially implemented, and 141 are identified for remediation — each with assigned owners, severity classification, and tracked SLAs. Gap assessments are now run per-framework (ISO 27001 and SOC 2 completed as initial baselines) with comparative tracking to measure remediation progress over time. Auditors receive a clear gap status report instead of discovering issues during audit.</p>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Case Study 3 -->
-      <div class="case-study glass-card" data-reveal>
-        <div class="case-study__header">
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
           <span class="case-study__number">03</span>
           <div>
             <h3 class="case-study__title">Cross-Framework Control Mapping for 11 Compliance Standards</h3>
@@ -942,7 +1009,9 @@
               <span>175 Mappings</span>
             </div>
           </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
         </div>
+        <div class="case-study__body">
         <div class="case-study__grid">
           <div class="case-study__block">
             <h4><i data-lucide="info"></i> Context</h4>
@@ -979,11 +1048,12 @@
             <p>Established 175 cross-framework mappings across the SaaS platform's 11 frameworks, eliminating duplicate evidence collection for overlapping controls. Each of the 371 controls now links to its framework-specific clause, risk, evidence, and DRI. Audit preparation time reduced significantly because auditors can see cross-framework coverage in a single view. The mapping is maintained as a living system — not a static spreadsheet — with real-time status tracking.</p>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Case Study 4 -->
-      <div class="case-study glass-card" data-reveal>
-        <div class="case-study__header">
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
           <span class="case-study__number">04</span>
           <div>
             <h3 class="case-study__title">SDLC Governance — Compliance by Design for SaaS Releases</h3>
@@ -993,7 +1063,9 @@
               <span>SaaS Platform</span>
             </div>
           </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
         </div>
+        <div class="case-study__body">
         <div class="case-study__grid">
           <div class="case-study__block">
             <h4><i data-lucide="info"></i> Context</h4>
@@ -1033,6 +1105,7 @@
             <h4><i data-lucide="check-circle"></i> Outcome</h4>
             <p>Established a fully operational SDLC governance pipeline for the SaaS platform — 7 phases, mandatory security checkpoints per phase, and trigger-based assessments per release. Auditors now have a per-release compliance view satisfying SOC 2 CC8.1 (Change Management), ISO 27001 A.8.25-A.8.31 (Secure Development), and ISO 9001 Clause 8 (Operational Planning). Compliance shifted from a post-release audit finding to a built-in development gate — governance by design, not by afterthought.</p>
           </div>
+        </div>
         </div>
       </div>
     </div>

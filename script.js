@@ -430,4 +430,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ===== SKILL BAR ANIMATION =====
+  const skillBars = document.querySelectorAll('.skill-bar');
+  if (skillBars.length > 0) {
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.setProperty('--level', bar.dataset.level);
+          bar.classList.add('skill-bar--active');
+          skillObserver.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.3 });
+    skillBars.forEach(bar => skillObserver.observe(bar));
+  }
+
 });

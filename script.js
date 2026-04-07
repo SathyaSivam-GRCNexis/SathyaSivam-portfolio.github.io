@@ -444,4 +444,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === FLOATING SOCIAL SIDEBAR — SHOW ON SCROLL ===
+  const socialSidebar = document.getElementById('socialSidebar');
+  if (socialSidebar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        socialSidebar.classList.add('social-sidebar--visible');
+      } else {
+        socialSidebar.classList.remove('social-sidebar--visible');
+      }
+    }, { passive: true });
+  }
+
 });

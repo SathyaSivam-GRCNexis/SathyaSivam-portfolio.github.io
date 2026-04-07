@@ -2132,98 +2132,6 @@ img { max-width: 100%; display: block; }
 .blog-card__link:hover { gap: 14px; }
 .blog-card__link:hover i, .blog-card__link:hover svg { transform: translateX(2px); }
 
-/* === BLOG PREVIEWS === */
-.blog-previews {
-  margin-top: 4rem;
-}
-
-.blog-previews__title {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.blog-previews__title i {
-  width: 20px;
-  height: 20px;
-  color: var(--accent-teal);
-}
-
-.blog-previews__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.blog-preview {
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-decoration: none;
-  border: 1px solid var(--glass-border);
-}
-
-.blog-preview:hover {
-  border-color: var(--accent-teal);
-  transform: translateY(-2px);
-  background: var(--glass-hover);
-}
-
-.blog-preview__tag {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--accent-teal);
-  background: rgba(79, 209, 197, 0.1);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  width: fit-content;
-}
-
-.blog-preview h4 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  line-height: 1.4;
-}
-
-.blog-preview p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.blog-preview__link {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent-teal);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: auto;
-  padding-top: 0.5rem;
-}
-
-.blog-preview__link i {
-  width: 14px;
-  height: 14px;
-  transition: var(--transition);
-}
-
-.blog-preview:hover .blog-preview__link i {
-  transform: translateX(4px);
-}
-
 /* === CONTACT === */
 .contact__grid {
   display: grid;
@@ -2858,7 +2766,6 @@ img { max-width: 100%; display: block; }
 
   /* Blog */
   .blog__grid { grid-template-columns: 1fr; }
-  .blog-previews__grid { grid-template-columns: 1fr; }
   .insights__grid { grid-template-columns: 1fr; }
 
   /* Insights accordion mobile */

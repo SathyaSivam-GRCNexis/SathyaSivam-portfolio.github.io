@@ -37,9 +37,9 @@
   --accent-pink: #f472b6;
 
   /* Text */
-  --text-primary: #f0eef5;
-  --text-secondary: #9896a8;
-  --text-muted: #5e5c6e;
+  --text-primary: #f5f3fa;
+  --text-secondary: #c4c2d4;
+  --text-muted: #8a889a;
 
   /* Borders */
   --border: rgba(255, 255, 255, 0.06);

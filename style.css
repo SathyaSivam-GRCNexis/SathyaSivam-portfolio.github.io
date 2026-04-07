@@ -793,7 +793,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   transition: var(--transition);
 }
 
@@ -803,40 +803,54 @@ img { max-width: 100%; display: block; }
 }
 
 .hero__socials a:hover {
-  color: var(--accent-teal);
-  border-color: var(--accent-teal);
-  background: rgba(79, 209, 197, 0.1);
   transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.hero__socials a[aria-label="LinkedIn"]:hover {
-  color: #0a66c2;
-  border-color: #0a66c2;
-  background: rgba(10, 102, 194, 0.1);
-}
-
-.hero__socials a[aria-label="GitHub"]:hover {
-  color: #f0f0f0;
-  border-color: #f0f0f0;
-  background: rgba(240, 240, 240, 0.08);
-}
-
-.hero__socials a[aria-label="Substack"]:hover {
-  color: #ff6719;
-  border-color: #ff6719;
-  background: rgba(255, 103, 25, 0.1);
-}
-
-.hero__socials a[aria-label="Email"]:hover {
+/* Brand colors by default */
+.hero__socials a[aria-label="Email"] {
   color: #ea4335;
+  border-color: rgba(234, 67, 53, 0.3);
+}
+.hero__socials a[aria-label="Email"] svg { stroke: #ea4335; }
+.hero__socials a[aria-label="Email"]:hover {
+  background: rgba(234, 67, 53, 0.12);
   border-color: #ea4335;
-  background: rgba(234, 67, 53, 0.1);
 }
 
+.hero__socials a[aria-label="LinkedIn"] {
+  color: #0a66c2;
+  border-color: rgba(10, 102, 194, 0.3);
+}
+.hero__socials a[aria-label="LinkedIn"]:hover {
+  background: rgba(10, 102, 194, 0.12);
+  border-color: #0a66c2;
+}
+
+.hero__socials a[aria-label="Topmate"] {
+  border-color: rgba(228, 67, 50, 0.3);
+}
 .hero__socials a[aria-label="Topmate"]:hover {
-  color: #6c63ff;
-  border-color: #6c63ff;
-  background: rgba(108, 99, 255, 0.1);
+  background: rgba(228, 67, 50, 0.12);
+  border-color: #E44332;
+}
+
+.hero__socials a[aria-label="GitHub"] {
+  color: #e0e0e0;
+  border-color: rgba(224, 224, 224, 0.2);
+}
+.hero__socials a[aria-label="GitHub"]:hover {
+  background: rgba(224, 224, 224, 0.08);
+  border-color: #e0e0e0;
+}
+
+.hero__socials a[aria-label="Substack"] {
+  color: #ff6719;
+  border-color: rgba(255, 103, 25, 0.3);
+}
+.hero__socials a[aria-label="Substack"]:hover {
+  background: rgba(255, 103, 25, 0.12);
+  border-color: #ff6719;
 }
 
 .hero__socials-divider {
@@ -2210,47 +2224,6 @@ img { max-width: 100%; display: block; }
   transform: translateX(4px);
 }
 
-/* === FOLLOW ME === */
-.follow-me {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.follow-me__title {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
-}
-
-.follow-me__icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-}
-
-.follow-me__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s var(--ease), opacity 0.3s;
-}
-
-.follow-me__icon svg {
-  width: 32px;
-  height: 32px;
-  fill: var(--text-primary);
-  transition: fill 0.3s var(--ease), transform 0.3s var(--ease);
-}
-
-.follow-me__icon:hover svg {
-  fill: var(--accent-teal);
-  transform: scale(1.15);
-}
-
 /* === CONTACT === */
 .contact__grid {
   display: grid;
@@ -2321,7 +2294,7 @@ img { max-width: 100%; display: block; }
 /* Individual icon colors */
 .contact__link:nth-child(1) .contact__link-icon { background: linear-gradient(135deg, #2dd4bf, #14b8a6); } /* Email — teal */
 .contact__link:nth-child(2) .contact__link-icon { background: linear-gradient(135deg, #0077B5, #005f94); } /* LinkedIn — blue */
-.contact__link:nth-child(3) .contact__link-icon { background: linear-gradient(135deg, #a78bfa, #7c3aed); } /* Topmate — purple */
+.contact__link:nth-child(3) .contact__link-icon { background: linear-gradient(135deg, #E44332, #c4352a); } /* Topmate — red */
 .contact__link:nth-child(4) .contact__link-icon { background: linear-gradient(135deg, #6b7280, #4b5563); } /* GitHub — grey */
 
 .contact__link-arrow {
@@ -2618,7 +2591,7 @@ img { max-width: 100%; display: block; }
 .social-sidebar__icon {
   width: 20px;
   height: 20px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   transition: var(--transition);
   display: flex;
   align-items: center;
@@ -2631,9 +2604,15 @@ img { max-width: 100%; display: block; }
 }
 
 .social-sidebar__icon:hover {
-  color: var(--accent-teal);
   transform: translateY(-3px);
 }
+
+/* Sidebar brand colors */
+.social-sidebar__icon[aria-label="Email"] { color: #ea4335; }
+.social-sidebar__icon[aria-label="Email"] svg { stroke: #ea4335; }
+.social-sidebar__icon[aria-label="LinkedIn"] { color: #0a66c2; }
+.social-sidebar__icon[aria-label="GitHub"] { color: #e0e0e0; }
+.social-sidebar__icon[aria-label="Substack"] { color: #ff6719; }
 
 /* Footer Social Icons */
 .footer__socials {
@@ -2656,7 +2635,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   transition: var(--transition);
 }
 
@@ -2666,11 +2645,26 @@ img { max-width: 100%; display: block; }
 }
 
 .footer__socials a:hover {
-  color: var(--accent-teal);
-  border-color: var(--accent-teal);
-  background: rgba(79, 209, 197, 0.1);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* Footer brand colors */
+.footer__socials a[aria-label="Email"] { color: #ea4335; border-color: rgba(234, 67, 53, 0.2); }
+.footer__socials a[aria-label="Email"] svg { stroke: #ea4335; }
+.footer__socials a[aria-label="Email"]:hover { background: rgba(234, 67, 53, 0.1); border-color: #ea4335; }
+
+.footer__socials a[aria-label="LinkedIn"] { color: #0a66c2; border-color: rgba(10, 102, 194, 0.2); }
+.footer__socials a[aria-label="LinkedIn"]:hover { background: rgba(10, 102, 194, 0.1); border-color: #0a66c2; }
+
+.footer__socials a[aria-label="Topmate"] { border-color: rgba(228, 67, 50, 0.2); }
+.footer__socials a[aria-label="Topmate"]:hover { background: rgba(228, 67, 50, 0.1); border-color: #E44332; }
+
+.footer__socials a[aria-label="GitHub"] { color: #e0e0e0; border-color: rgba(224, 224, 224, 0.15); }
+.footer__socials a[aria-label="GitHub"]:hover { background: rgba(224, 224, 224, 0.08); border-color: #e0e0e0; }
+
+.footer__socials a[aria-label="Substack"] { color: #ff6719; border-color: rgba(255, 103, 25, 0.2); }
+.footer__socials a[aria-label="Substack"]:hover { background: rgba(255, 103, 25, 0.1); border-color: #ff6719; }
 
 /* === ANIMATIONS === */
 @keyframes orbFloat {
@@ -2939,10 +2933,6 @@ img { max-width: 100%; display: block; }
   .timeline__item { padding-left: 0; }
 
   .container { padding: 0 20px; }
-
-  /* Follow Me mobile */
-  .follow-me__icons { gap: 24px; }
-  .follow-me__icon svg { width: 28px; height: 28px; }
 
   /* Insights accordion extra-small */
   .insight-item__summary { padding: 16px; gap: 12px; }

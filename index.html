@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons (pinned version) -->
-  <script src="https://unpkg.com/lucide@1.7.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@1.7.0/dist/umd/lucide.min.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%232dd4bf'/%3E%3Cstop offset='100%25' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4L8 16v14c0 14.4 10 27.9 24 31.2C46 58 56 44.4 56 30V16L32 4z' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M14 34c4-5 8 2 12-3s8 4 12-1 8 3 12-2' fill='none' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M16 42c4-4 7 2 11-2s7 3 11-1 7 2 10-1' fill='none' stroke='url(%23g)' stroke-width='2' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E">
@@ -324,88 +324,110 @@
         <p class="section__subtitle">Core expertise spanning governance, risk management, privacy, compliance operations, and AI-enabled GRC workflows.</p>
       </div>
 
-      <div class="skills__grid">
-        <div class="skill-card glass-card" data-tilt data-reveal>
-          <div class="skill-card__glow"></div>
-          <div class="skill-card__icon-wrap">
-            <i data-lucide="shield-check"></i>
+      <div class="skills-categories">
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="file-text"></i></div>
+            <h3 class="skill-category__title">Frameworks & Standards</h3>
           </div>
-          <h3 class="skill-card__title">Privacy & Data Protection</h3>
-          <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> GDPR Implementation & Compliance</li>
-            <li><span class="skill-card__bullet"></span> HIPAA Security & Privacy Rules</li>
-            <li><span class="skill-card__bullet"></span> Privacy Impact Assessments (PIA/DPIA)</li>
-            <li><span class="skill-card__bullet"></span> Data Mapping & Flow Analysis</li>
-            <li><span class="skill-card__bullet"></span> SEBI Regulatory Compliance</li>
-            <li><span class="skill-card__bullet"></span> DPDPA (India) Compliance</li>
-          </ul>
+          <div class="skill-category__tags">
+            <span class="skill-tag">ISO 27001</span>
+            <span class="skill-tag">ISO 27701</span>
+            <span class="skill-tag">ISO 27017</span>
+            <span class="skill-tag">ISO 27018</span>
+            <span class="skill-tag">ISO 9001</span>
+            <span class="skill-tag">ISO 22301</span>
+            <span class="skill-tag">ISO 42001</span>
+            <span class="skill-tag">SOC 2</span>
+            <span class="skill-tag">CSA STAR</span>
+            <span class="skill-tag">GDPR</span>
+            <span class="skill-tag">HIPAA</span>
+            <span class="skill-tag">DPDPA</span>
+            <span class="skill-tag">SEBI</span>
+            <span class="skill-tag">ENS</span>
+          </div>
         </div>
 
-        <div class="skill-card glass-card" data-tilt data-reveal>
-          <div class="skill-card__glow"></div>
-          <div class="skill-card__icon-wrap">
-            <i data-lucide="activity"></i>
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="activity"></i></div>
+            <h3 class="skill-category__title">Risk Management</h3>
           </div>
-          <h3 class="skill-card__title">Risk Management</h3>
-          <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> Enterprise Risk Assessments</li>
-            <li><span class="skill-card__bullet"></span> Gap Analysis & Remediation</li>
-            <li><span class="skill-card__bullet"></span> Risk Register Development</li>
-            <li><span class="skill-card__bullet"></span> Incident Management & Response</li>
-            <li><span class="skill-card__bullet"></span> Risk Scoring & Quantification (5x5 Matrix)</li>
-            <li><span class="skill-card__bullet"></span> Mitigation & Residual Risk Tracking</li>
-          </ul>
+          <div class="skill-category__tags">
+            <span class="skill-tag">Enterprise Risk Assessment</span>
+            <span class="skill-tag">Gap Analysis</span>
+            <span class="skill-tag">Risk Register</span>
+            <span class="skill-tag">5x5 Scoring Matrix</span>
+            <span class="skill-tag">KRI Monitoring</span>
+            <span class="skill-tag">Mitigation Tracking</span>
+            <span class="skill-tag">Risk Appetite</span>
+            <span class="skill-tag">Residual Risk</span>
+            <span class="skill-tag">Incident Response</span>
+          </div>
         </div>
 
-        <div class="skill-card glass-card" data-tilt data-reveal>
-          <div class="skill-card__glow"></div>
-          <div class="skill-card__icon-wrap">
-            <i data-lucide="file-text"></i>
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="skill-category__title">Privacy & Data Protection</h3>
           </div>
-          <h3 class="skill-card__title">Governance & Compliance</h3>
-          <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> ISO 27001 / 27701 Implementation & Auditing</li>
-            <li><span class="skill-card__bullet"></span> ISO 27017 / 27018 Cloud & PII Protection</li>
-            <li><span class="skill-card__bullet"></span> SOC 2 Audit Support</li>
-            <li><span class="skill-card__bullet"></span> ISO 9001 Quality Management</li>
-            <li><span class="skill-card__bullet"></span> BCMS (Business Continuity Management)</li>
-            <li><span class="skill-card__bullet"></span> CSA STAR Cloud Security</li>
-            <li><span class="skill-card__bullet"></span> Policy & Procedure Development</li>
-            <li><span class="skill-card__bullet"></span> Internal & External Audit Management</li>
-            <li><span class="skill-card__bullet"></span> Control Mapping Across Frameworks</li>
-          </ul>
+          <div class="skill-category__tags">
+            <span class="skill-tag">DPIA</span>
+            <span class="skill-tag">Data Mapping</span>
+            <span class="skill-tag">Privacy Impact Assessment</span>
+            <span class="skill-tag">Data Flow Analysis</span>
+            <span class="skill-tag">GDPR Implementation</span>
+            <span class="skill-tag">HIPAA Privacy Rules</span>
+            <span class="skill-tag">SEBI Compliance</span>
+            <span class="skill-tag">DPDPA Compliance</span>
+          </div>
         </div>
 
-        <div class="skill-card glass-card" data-tilt data-reveal>
-          <div class="skill-card__glow"></div>
-          <div class="skill-card__icon-wrap">
-            <i data-lucide="bot"></i>
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="search"></i></div>
+            <h3 class="skill-category__title">Audit & Compliance Operations</h3>
           </div>
-          <h3 class="skill-card__title">AI & Compliance Innovation</h3>
-          <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> AI-Assisted Compliance Workflows</li>
-            <li><span class="skill-card__bullet"></span> Evidence Quality Scoring & Classification</li>
-            <li><span class="skill-card__bullet"></span> Anomaly Detection in Compliance Data</li>
-            <li><span class="skill-card__bullet"></span> AI Security & Risk (CAISR Certified)</li>
-            <li><span class="skill-card__bullet"></span> Audit Readiness Scoring</li>
-            <li><span class="skill-card__bullet"></span> ISO 42001 AI Management Systems</li>
-          </ul>
+          <div class="skill-category__tags">
+            <span class="skill-tag">Internal Audit</span>
+            <span class="skill-tag">External Audit</span>
+            <span class="skill-tag">Customer Audit</span>
+            <span class="skill-tag">Evidence Lifecycle</span>
+            <span class="skill-tag">Control Mapping</span>
+            <span class="skill-tag">Compliance Scoring</span>
+            <span class="skill-tag">Policy Development</span>
+            <span class="skill-tag">Audit Readiness</span>
+            <span class="skill-tag">SLA Tracking</span>
+          </div>
         </div>
 
-        <div class="skill-card glass-card" data-tilt data-reveal>
-          <div class="skill-card__glow"></div>
-          <div class="skill-card__icon-wrap">
-            <i data-lucide="users"></i>
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="bot"></i></div>
+            <h3 class="skill-category__title">AI & GRC Innovation</h3>
           </div>
-          <h3 class="skill-card__title">Leadership & Communication</h3>
-          <ul class="skill-card__list">
-            <li><span class="skill-card__bullet"></span> GRC Thought Leadership & Writing</li>
-            <li><span class="skill-card__bullet"></span> 1:1 Mentoring & Career Guidance</li>
-            <li><span class="skill-card__bullet"></span> Stakeholder Communication</li>
-            <li><span class="skill-card__bullet"></span> Training & Awareness Programs</li>
-            <li><span class="skill-card__bullet"></span> Cross-Functional Collaboration</li>
-            <li><span class="skill-card__bullet"></span> Compliance Awareness & Training Delivery</li>
-          </ul>
+          <div class="skill-category__tags">
+            <span class="skill-tag">AI-Assisted Compliance</span>
+            <span class="skill-tag">Evidence Quality Scoring</span>
+            <span class="skill-tag">Anomaly Detection</span>
+            <span class="skill-tag">AI Security (CAISR)</span>
+            <span class="skill-tag">ISO 42001 AI Management</span>
+            <span class="skill-tag">Audit Readiness Scoring</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="users"></i></div>
+            <h3 class="skill-category__title">Leadership & Communication</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">GRC Thought Leadership</span>
+            <span class="skill-tag">1:1 Mentoring</span>
+            <span class="skill-tag">Stakeholder Communication</span>
+            <span class="skill-tag">Training & Awareness</span>
+            <span class="skill-tag">Cross-Functional Collaboration</span>
+          </div>
         </div>
       </div>
 

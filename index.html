@@ -55,68 +55,1356 @@
   <!-- ============ PARTICLES CANVAS ============ -->
   <canvas id="particles"></canvas>
 
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar__header">
-      <a href="#hero" class="sidebar__logo">
-        <svg class="sidebar__logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <svg class="nav__logo-shield" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="sidebarLogoGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#2dd4bf"/>
               <stop offset="100%" stop-color="#a78bfa"/>
             </linearGradient>
           </defs>
-          <path d="M32 4L8 16v14c0 14.4 10 27.9 24 31.2C46 58 56 44.4 56 30V16L32 4z" stroke="url(#sidebarLogoGrad)" stroke-width="3" fill="none"/>
-          <path d="M14 34c4-5 8 2 12-3s8 4 12-1 8 3 12-2" fill="none" stroke="url(#sidebarLogoGrad)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M16 42c4-4 7 2 11-2s7 3 11-1 7 2 10-1" fill="none" stroke="url(#sidebarLogoGrad)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          <path d="M32 4L8 16v14c0 14.4 10 27.9 24 31.2C46 58 56 44.4 56 30V16L32 4z" stroke="url(#logoGrad)" stroke-width="3" fill="none"/>
+          <path d="M14 34c4-5 8 2 12-3s8 4 12-1 8 3 12-2" fill="none" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M16 42c4-4 7 2 11-2s7 3 11-1 7 2 10-1" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
         </svg>
+        <span class="nav__logo-text">Shree Sathya<span class="nav__logo-dot"></span></span>
       </a>
-      <h1 class="sidebar__name">Shree Sathya</h1>
-      <p class="sidebar__role">GRC Analyst</p>
-      <p class="sidebar__company">Zoho Corporation</p>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#mindset" class="nav__link">Mindset</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#case-studies" class="nav__link">Case Studies</a>
+        <a href="#blog" class="nav__link">Blog</a>
+        <a href="#contact" class="nav__link nav__link--cta">
+          <i data-lucide="send" class="nav__cta-icon"></i>
+          Contact
+        </a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__grid-overlay"></div>
     </div>
 
-    <nav class="sidebar__nav">
-      <a href="#hero" class="sidebar__link" data-section="hero">
-        <i data-lucide="home"></i>
-        <span>Home</span>
-      </a>
-      <a href="#about" class="sidebar__link" data-section="about">
-        <i data-lucide="user"></i>
-        <span>About</span>
-      </a>
-      <a href="#mindset" class="sidebar__link" data-section="mindset">
-        <i data-lucide="brain"></i>
-        <span>Mindset</span>
-      </a>
-      <a href="#skills" class="sidebar__link" data-section="skills">
-        <i data-lucide="layers"></i>
-        <span>Skills</span>
-      </a>
-      <a href="#experience" class="sidebar__link" data-section="experience">
-        <i data-lucide="briefcase"></i>
-        <span>Experience</span>
-      </a>
-      <a href="#projects" class="sidebar__link" data-section="projects">
-        <i data-lucide="folder-open"></i>
-        <span>Projects</span>
-      </a>
-      <a href="#case-studies" class="sidebar__link" data-section="case-studies">
-        <i data-lucide="file-search"></i>
-        <span>Case Studies</span>
-      </a>
-      <a href="#blog" class="sidebar__link" data-section="blog">
-        <i data-lucide="rss"></i>
-        <span>Blog</span>
-      </a>
-      <a href="#contact" class="sidebar__link" data-section="contact">
-        <i data-lucide="mail"></i>
-        <span>Contact</span>
-      </a>
-    </nav>
+    <!-- Floating badges -->
+    <div class="hero__floating hero__floating--1">
+      <i data-lucide="shield-check"></i>
+      <span>ISO 27001 Lead Auditor</span>
+    </div>
+    <div class="hero__floating hero__floating--2">
+      <i data-lucide="lock"></i>
+      <span>GDPR & HIPAA</span>
+    </div>
+    <div class="hero__floating hero__floating--3">
+      <i data-lucide="file-check"></i>
+      <span>SEBI</span>
+    </div>
 
-    <div class="sidebar__footer">
-      <div class="sidebar__socials">
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Bringing the Ocean to the Table — Empowering Compliance, One Wave at a Time
+      </div>
+
+      <div class="hero__title">
+        <div class="hero__title-line">
+          <span class="hero__title-word hero__title-word--outline">GRC</span>
+        </div>
+        <div class="hero__title-line">
+          <span class="hero__title-word gradient-text">Analyst</span>
+        </div>
+      </div>
+
+      <div class="hero__info">
+        <div class="hero__subtitle">
+           I help organizations find security risks, put protective measures in place, and stay ready for audits — across cloud software platforms.
+          <span class="hero__typed" id="heroTyped"></span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#case-studies" class="btn btn--primary magnetic">
+          <span>View Case Studies</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn--glass magnetic">
+          <span>Let's Talk</span>
+          <i data-lucide="message-circle"></i>
+        </a>
+        <a href="#" class="btn btn--icon magnetic" title="Download Resume">
+          <i data-lucide="download"></i>
+        </a>
+        <a href="compliance-philosophy.html" class="btn btn--icon magnetic" title="Compliance Philosophy" target="_blank">
+          <i data-lucide="file-text"></i>
+        </a>
+      </div>
+
+      <div class="hero__socials">
+        <a href="mailto:sathyasivam.ps@gmail.com" aria-label="Email" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/sathya-sivam" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://topmate.io/sathya_sivam" target="_blank" aria-label="Topmate" title="Topmate">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 46"><circle r="22.5" transform="matrix(1 0 0 -1 23.615 23)" fill="#E44332"/><path d="M33 29.64C31.57 31.67 29.52 33.18 27.16 33.94 24.8 34.7 22.25 34.69 19.9 33.89 17.56 33.08 15.53 31.55 14.13 29.5 12.72 27.45 12.02 25 12.13 22.52 12.23 20.05 13.13 17.67 14.7 15.74 16.26 13.82 18.41 12.45 20.82 11.85 23.22 11.24 25.76 11.43 28.05 12.39 30.34 13.35 32.26 15.02 33.52 17.16L23.62 23 33 29.64Z" fill="#FEF7F7"/></svg>
+        </a>
+        <a href="https://github.com/SathyaSivam-GRCNexis" target="_blank" aria-label="GitHub" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://grcnexis.substack.com" target="_blank" aria-label="Substack" title="Substack">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        </a>
+        <span class="hero__socials-divider"></span>
+        <span class="hero__socials-label">Connect with me</span>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="calendar"></i></div>
+          <span class="hero__stat-number" data-count="4">0</span>
+          <span class="hero__stat-label">Years<br>Experience</span>
+        </div>
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="search"></i></div>
+          <span class="hero__stat-number" data-count="40">0</span>
+          <span class="hero__stat-label">Audits<br>Led & Conducted</span>
+        </div>
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="layers"></i></div>
+          <span class="hero__stat-number" data-count="12">0</span>
+          <span class="hero__stat-label">Compliance<br>Frameworks</span>
+        </div>
+        <div class="hero__stat glass-card" data-reveal>
+          <div class="hero__stat-icon"><i data-lucide="award"></i></div>
+          <span class="hero__stat-number" data-count="7">0</span>
+          <span class="hero__stat-label">Professional<br>Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-mouse">
+        <div class="hero__scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE STRIP ============ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span>SOC 2</span><span class="marquee__dot"></span>
+        <span>ISO 27001</span><span class="marquee__dot"></span>
+        <span>GDPR</span><span class="marquee__dot"></span>
+        <span>HIPAA</span><span class="marquee__dot"></span>
+        <span>ISO 27701</span><span class="marquee__dot"></span>
+        <span>ISO 27017</span><span class="marquee__dot"></span>
+        <span>ISO 27018</span><span class="marquee__dot"></span>
+        <span>ISO 9001</span><span class="marquee__dot"></span>
+        <span>ISO 22301</span><span class="marquee__dot"></span>
+        <span>ENS</span><span class="marquee__dot"></span>
+        <span>CSA STAR</span><span class="marquee__dot"></span>
+        <span>NIST 800-53</span><span class="marquee__dot"></span>
+        <span>SEBI</span><span class="marquee__dot"></span>
+        <span>Risk Assessment</span><span class="marquee__dot"></span>
+      </div>
+      <div class="marquee__content" aria-hidden="true">
+        <span>SOC 2</span><span class="marquee__dot"></span>
+        <span>ISO 27001</span><span class="marquee__dot"></span>
+        <span>GDPR</span><span class="marquee__dot"></span>
+        <span>HIPAA</span><span class="marquee__dot"></span>
+        <span>ISO 27701</span><span class="marquee__dot"></span>
+        <span>ISO 27017</span><span class="marquee__dot"></span>
+        <span>ISO 27018</span><span class="marquee__dot"></span>
+        <span>ISO 9001</span><span class="marquee__dot"></span>
+        <span>ISO 22301</span><span class="marquee__dot"></span>
+        <span>ENS</span><span class="marquee__dot"></span>
+        <span>CSA STAR</span><span class="marquee__dot"></span>
+        <span>NIST 800-53</span><span class="marquee__dot"></span>
+        <span>SEBI</span><span class="marquee__dot"></span>
+        <span>Risk Assessment</span><span class="marquee__dot"></span>
+        <span>Data Privacy</span><span class="marquee__dot"></span>
+        <span>Incident Response</span><span class="marquee__dot"></span>
+        <span>Policy Development</span><span class="marquee__dot"></span>
+        <span>Gap Analysis</span><span class="marquee__dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="user"></i> About Me</span>
+        <h2 class="section__title">Risk-Driven.<br><span class="gradient-text">Audit-Ready.</span></h2>
+        <p class="section__subtitle">I don't just document compliance (meeting security rules). I find risks, put safeguards in place, and make sure organizations are always ready for audits.</p>
+      </div>
+
+      <div class="about__grid">
+        <div data-reveal>
+          <p class="about__intro">
+            I'm <span class="highlight-text">Shree Sathya</span> — a GRC Analyst at Zoho Corporation with 4 years of experience helping organizations manage security, risk, and compliance for cloud software platforms.
+          </p>
+          <p class="about__text">
+            My day-to-day work is about finding business risks, putting protective measures (called "controls") in place, and closing gaps before auditors find them. I've led and represented 40+ audits — internal reviews, external certifications, and customer security assessments — across standards like ISO 27001, GDPR, HIPAA, SOC 2, and SEBI. I also act as an internal auditor, conducting independent audit reviews.
+          </p>
+          <p class="about__text">
+            I manage compliance for a SaaS platform across 12 international security and privacy standards — building risk registers (lists of identified threats), running gap assessments (finding what's missing), creating cross-framework mappings (linking overlapping requirements), and designing evidence collection workflows. Across 434 controls and 12 frameworks, my focus is on making compliance a sustainable daily practice — not just a once-a-year audit exercise.
+          </p>
+
+          <div class="about__cards">
+            <div class="about__card glass-card" data-reveal>
+              <i data-lucide="target"></i>
+              <div>
+                <strong>Risk-First Approach</strong>
+                <p>Every security decision starts with understanding what could go wrong and how it would affect the business.</p>
+              </div>
+            </div>
+            <div class="about__card glass-card" data-reveal>
+              <i data-lucide="git-branch"></i>
+              <div>
+                <strong>Practical Implementation</strong>
+                <p>Turning security rules from standards documents into real, everyday processes that teams can actually follow.</p>
+              </div>
+            </div>
+            <div class="about__card glass-card" data-reveal>
+              <i data-lucide="search"></i>
+              <div>
+                <strong>Audit-Ready Mindset</strong>
+                <p>Building processes that can withstand external review at any time — not just during audit season.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW I THINK ============ -->
+  <section class="section" id="mindset">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="brain"></i> GRC Mindset</span>
+        <h2 class="section__title">How I <span class="gradient-text">Think</span></h2>
+        <p class="section__subtitle">The principles that guide how I approach every security review, risk assessment, and audit.</p>
+      </div>
+
+      <div class="mindset__grid">
+        <div class="mindset-card glass-card" data-reveal>
+          <div class="mindset-card__number">01</div>
+          <h3 class="mindset-card__title">Risk Before Compliance</h3>
+          <p class="mindset-card__text">I never start with a checklist. I start with the question: <em>"What can go wrong, and how would it affect the business?"</em> When I assessed risks for a SaaS platform across 5 categories (Engineering, Operational, Vendor, Legal, Business), every security decision was driven by a scored risk — not by which rule came next in a standards document.</p>
+        </div>
+
+        <div class="mindset-card glass-card" data-reveal>
+          <div class="mindset-card__number">02</div>
+          <h3 class="mindset-card__title">Severity-Based Prioritization</h3>
+          <p class="mindset-card__text">Not all gaps are equally urgent. When I found 6 types of compliance gaps across 12 frameworks, I classified each by severity — Critical, High, Medium, Low. A missing security safeguard protecting customer data is Critical. A missing documentation link is Low. Resources go where the risk is highest.</p>
+        </div>
+
+        <div class="mindset-card glass-card" data-reveal>
+          <div class="mindset-card__number">03</div>
+          <h3 class="mindset-card__title">Governance by Design</h3>
+          <p class="mindset-card__text">Security should be built into how teams work — not added after the fact. When I designed security checkpoints for a SaaS platform's development process, I placed compliance gates at every phase with 5 trigger types. This means security is checked during development, not discovered as a problem after release.</p>
+        </div>
+
+        <div class="mindset-card glass-card" data-reveal>
+          <div class="mindset-card__number">04</div>
+          <h3 class="mindset-card__title">Evidence-Driven, Not Opinion-Driven</h3>
+          <p class="mindset-card__text">Every finding I raise is backed by proof. When tracking compliance across 434 controls, I score evidence on 4 dimensions — completeness, freshness, format, and coverage — with quality grades from A to F. If the evidence quality is poor, the control gets flagged regardless of what the responsible person claims. Audits should be objective, not based on assumptions.</p>
+        </div>
+
+        <div class="mindset-card glass-card" data-reveal>
+          <div class="mindset-card__number">05</div>
+          <h3 class="mindset-card__title">Translate Risk Into Business Language</h3>
+          <p class="mindset-card__text">A risk list that leadership can't understand is a risk list that gets ignored. When presenting to stakeholders, I translate technical security risks into business terms — potential revenue impact, regulatory fines, and customer trust. The risk heat map I designed isn't just for analysts — it gives executives a quick view of where the organization stands, what's being addressed, and what needs urgent attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS & CERTIFICATIONS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="layers"></i> Skills & Certifications</span>
+        <h2 class="section__title">Core <span class="gradient-text">Competencies</span></h2>
+        <p class="section__subtitle">Core expertise across security governance, risk management, privacy, compliance operations, and AI-enabled workflows.</p>
+      </div>
+
+      <div class="skills-categories">
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="file-text"></i></div>
+            <h3 class="skill-category__title">Frameworks & Standards</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">ISO 27001</span>
+            <span class="skill-tag">ISO 27701</span>
+            <span class="skill-tag">ISO 27017</span>
+            <span class="skill-tag">ISO 27018</span>
+            <span class="skill-tag">ISO 9001</span>
+            <span class="skill-tag">ISO 22301</span>
+            <span class="skill-tag">ISO 42001</span>
+            <span class="skill-tag">SOC 2</span>
+            <span class="skill-tag">CSA STAR</span>
+            <span class="skill-tag">NIST 800-53</span>
+            <span class="skill-tag">GDPR</span>
+            <span class="skill-tag">HIPAA</span>
+            <span class="skill-tag">DPDPA</span>
+            <span class="skill-tag">SEBI</span>
+            <span class="skill-tag">ENS</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="activity"></i></div>
+            <h3 class="skill-category__title">Risk Management</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">Enterprise Risk Assessment</span>
+            <span class="skill-tag">Gap Analysis</span>
+            <span class="skill-tag">Risk Register</span>
+            <span class="skill-tag">5x5 Scoring Matrix</span>
+            <span class="skill-tag">KRI Monitoring</span>
+            <span class="skill-tag">Mitigation Tracking</span>
+            <span class="skill-tag">Risk Appetite</span>
+            <span class="skill-tag">Residual Risk</span>
+            <span class="skill-tag">Incident Response</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="skill-category__title">Privacy & Data Protection</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">DPIA</span>
+            <span class="skill-tag">Data Mapping</span>
+            <span class="skill-tag">Privacy Impact Assessment</span>
+            <span class="skill-tag">Data Flow Analysis</span>
+            <span class="skill-tag">GDPR Implementation</span>
+            <span class="skill-tag">HIPAA Privacy Rules</span>
+            <span class="skill-tag">SEBI Compliance</span>
+            <span class="skill-tag">DPDPA Compliance</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="search"></i></div>
+            <h3 class="skill-category__title">Audit & Compliance Operations</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">Internal Audit</span>
+            <span class="skill-tag">External Audit</span>
+            <span class="skill-tag">Customer Audit</span>
+            <span class="skill-tag">Evidence Lifecycle</span>
+            <span class="skill-tag">Control Mapping</span>
+            <span class="skill-tag">Compliance Scoring</span>
+            <span class="skill-tag">Policy Development</span>
+            <span class="skill-tag">Audit Readiness</span>
+            <span class="skill-tag">SLA Tracking</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="bot"></i></div>
+            <h3 class="skill-category__title">AI & GRC Innovation</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">AI-Assisted Compliance</span>
+            <span class="skill-tag">Evidence Quality Scoring</span>
+            <span class="skill-tag">Anomaly Detection</span>
+            <span class="skill-tag">AI Security (CAISR)</span>
+            <span class="skill-tag">ISO 42001 AI Management</span>
+            <span class="skill-tag">Audit Readiness Scoring</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-category__header">
+            <div class="skill-category__icon"><i data-lucide="users"></i></div>
+            <h3 class="skill-category__title">Leadership & Communication</h3>
+          </div>
+          <div class="skill-category__tags">
+            <span class="skill-tag">GRC Thought Leadership</span>
+            <span class="skill-tag">1:1 Mentoring</span>
+            <span class="skill-tag">Stakeholder Communication</span>
+            <span class="skill-tag">Training & Awareness</span>
+            <span class="skill-tag">Cross-Functional Collaboration</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="certifications" data-reveal>
+        <h3 class="certifications__title">
+          <i data-lucide="award"></i>
+          Professional Certifications
+        </h3>
+        <div class="certifications__grid">
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>ISO/IEC 27001:2022 Lead Auditor</strong><p>CQI and IRCA Certified — BSI</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>BSI Group</strong></div>
+                <div class="cert-flip__detail"><span>Scheme</span><strong>CQI-IRCA Certified</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>ISO/IEC 42001:2023 Lead Auditor</strong><p>AI Management Systems — Mastermind</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>Mastermind</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 42001:2023</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>AI Management Systems</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>CSA STAR Lead Auditor</strong><p>Trained — BSI Training Academy</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>BSI Training Academy</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>CSA STAR</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Cloud Security Assurance</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>CAISR</strong><p>Certified AI Security & Risk — Red Team Leaders</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>Red Team Leaders</strong></div>
+                <div class="cert-flip__detail"><span>Certification</span><strong>CAISR</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>AI Security & Risk</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>ISO/IEC 27001:2022 Internal Auditor</strong><p>Information Security — TÜV SÜD</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Information Security</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>ISO 9001:2015 Internal Auditor</strong><p>Quality Management — TÜV SÜD</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
+                <div class="cert-flip__detail"><span>Standard</span><strong>ISO 9001:2015</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Quality Management</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-flip">
+            <div class="cert-flip__inner">
+              <div class="cert-flip__front glass-card">
+                <i data-lucide="check-circle"></i>
+                <div><strong>DPDPA Certified</strong><p>Digital Personal Data Protection Act — India</p></div>
+              </div>
+              <div class="cert-flip__back glass-card">
+                <div class="cert-flip__detail"><span>Regulation</span><strong>DPDPA 2023</strong></div>
+                <div class="cert-flip__detail"><span>Jurisdiction</span><strong>India</strong></div>
+                <div class="cert-flip__detail"><span>Focus</span><strong>Personal Data Protection</strong></div>
+                <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="briefcase"></i> Experience</span>
+        <h2 class="section__title">Professional <span class="gradient-text">Journey</span></h2>
+        <p class="section__subtitle">Growing from intern to compliance professional through hands-on audits, real-world security challenges, and cross-team collaboration.</p>
+      </div>
+
+      <div class="timeline timeline--split">
+        <div class="timeline__line">
+          <div class="timeline__line-fill" id="timelineLineFill"></div>
+        </div>
+
+        <!-- Experience 1 -->
+        <div class="timeline__item timeline__item--right" data-reveal>
+          <div class="timeline__marker">
+            <div class="timeline__marker-dot"></div>
+            <div class="timeline__marker-pulse"></div>
+          </div>
+          <div class="timeline__content glass-card">
+            <div class="timeline__gradient-border"></div>
+            <div class="timeline__header-row">
+              <span class="timeline__date-badge">Sep 2022 — Present</span>
+              <span class="timeline__role-badge timeline__role-badge--senior">Full-Time</span>
+            </div>
+            <h3>Member of Technical Staff</h3>
+            <div class="timeline__company">
+              <i data-lucide="building-2"></i>
+              <span>Zoho Corporation</span>
+            </div>
+            <div class="timeline__stats">
+              <span class="timeline__stat"><strong>40+</strong> Audits Led</span>
+              <span class="timeline__stat"><strong>12</strong> Frameworks</span>
+              <span class="timeline__stat"><strong>434</strong> Controls</span>
+              <span class="timeline__stat"><strong>175</strong> Mappings</span>
+            </div>
+            <ul class="timeline__details">
+              <li>
+                <i data-lucide="shield"></i>
+                <span>Led and represented 40+ audits — internal reviews, external certification audits, and customer security assessments — across standards like ISO 27001, GDPR, HIPAA, and SOC 2. Also conducted independent internal audits.</span>
+              </li>
+              <li>
+                <i data-lucide="alert-triangle"></i>
+                <span>Performed risk assessments and gap analyses to identify security weaknesses, then built risk registers (threat inventories) and mitigation plans to address them</span>
+              </li>
+              <li>
+                <i data-lucide="file-text"></i>
+                <span>Led policy development and implementation — creating security rules and making sure teams across the organization follow them consistently</span>
+              </li>
+              <li>
+                <i data-lucide="siren"></i>
+                <span>Managed incident response (handling security events) and customer assurance processes, supporting regulatory inquiries and privacy impact assessments</span>
+              </li>
+              <li>
+                <i data-lucide="layers"></i>
+                <span>Designed a compliance management system for the SaaS platform — covering risk assessment, gap detection, evidence tracking, cross-framework control mapping, and development lifecycle security across 12 compliance standards with 434 controls</span>
+              </li>
+            </ul>
+            <div class="timeline__tags">
+              <span>GDPR</span>
+              <span>HIPAA</span>
+              <span>ISO 27001</span>
+              <span>SOC 2</span>
+              <span>Risk Assessment</span>
+              <span>Policy Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline__item timeline__item--left" data-reveal>
+          <div class="timeline__marker">
+            <div class="timeline__marker-dot"></div>
+            <div class="timeline__marker-pulse"></div>
+          </div>
+          <div class="timeline__content glass-card">
+            <div class="timeline__gradient-border"></div>
+            <div class="timeline__header-row">
+              <span class="timeline__date-badge">Jan 2022 — Aug 2022</span>
+              <span class="timeline__role-badge timeline__role-badge--junior">Internship</span>
+            </div>
+            <h3>Intern</h3>
+            <div class="timeline__company">
+              <i data-lucide="building-2"></i>
+              <span>Zoho Corporation</span>
+            </div>
+            <div class="timeline__stats">
+              <span class="timeline__stat"><strong>5+</strong> Audits Assisted</span>
+              <span class="timeline__stat"><strong>8</strong> Months</span>
+            </div>
+            <ul class="timeline__details">
+              <li>
+                <i data-lucide="search"></i>
+                <span>Helped identify security gaps and vulnerabilities through compliance risk assessments alongside senior team members</span>
+              </li>
+              <li>
+                <i data-lucide="file-check"></i>
+                <span>Supported accurate documentation of compliance processes — the written evidence that proves an organization follows its security rules</span>
+              </li>
+              <li>
+                <i data-lucide="shield"></i>
+                <span>Assisted in coordinating external audits by gathering and organizing the documentation auditors needed to review</span>
+              </li>
+              <li>
+                <i data-lucide="presentation"></i>
+                <span>Helped identify training needs across teams and assisted in creating security awareness training materials</span>
+              </li>
+              <li>
+                <i data-lucide="clipboard-check"></i>
+                <span>Participated in internal audits — reviewing whether the organization's security controls, processes, and procedures were working as intended</span>
+              </li>
+            </ul>
+            <div class="timeline__tags">
+              <span>Internal Audits</span>
+              <span>Risk Assessment</span>
+              <span>Training</span>
+              <span>Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="folder-open"></i> Projects</span>
+        <h2 class="section__title">GRC at <span class="gradient-text">Scale</span></h2>
+        <p class="section__subtitle">Key compliance initiatives I've designed for a SaaS platform — managing risk, evidence, gaps, and audit readiness across 12 frameworks and 434 controls.</p>
+      </div>
+
+      <div class="impact-metrics" data-reveal>
+        <div class="impact-metric glass-card">
+          <div class="impact-metric__icon"><i data-lucide="layers"></i></div>
+          <span class="impact-metric__number gradient-text">434</span>
+          <span class="impact-metric__label">Security Controls Managed</span>
+        </div>
+        <div class="impact-metric glass-card">
+          <div class="impact-metric__icon"><i data-lucide="repeat"></i></div>
+          <span class="impact-metric__number gradient-text">175</span>
+          <span class="impact-metric__label">Cross-Framework Mappings</span>
+        </div>
+        <div class="impact-metric glass-card">
+          <div class="impact-metric__icon"><i data-lucide="file-text"></i></div>
+          <span class="impact-metric__number gradient-text">12</span>
+          <span class="impact-metric__label">Compliance Frameworks</span>
+        </div>
+        <div class="impact-metric glass-card">
+          <div class="impact-metric__icon"><i data-lucide="alert-triangle"></i></div>
+          <span class="impact-metric__number gradient-text">18</span>
+          <span class="impact-metric__label">Risks Identified & Tracked</span>
+        </div>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Project 1: Evidence Collection & Lifecycle -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Evidence</span>
+            <span class="project-card__number">01</span>
+          </div>
+          <h3 class="project-card__title">Evidence Collection & Lifecycle Management</h3>
+          <p class="project-card__desc">Designed an end-to-end system for collecting and managing compliance evidence — the documents, screenshots, and records that prove your organization follows its security rules. Each piece of evidence is assigned to a specific person (DRI), scored for quality, reviewed by a separate person, and tracked through a 5-tier deadline escalation system to ensure nothing gets missed.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">-tier</span>
+              <p>Escalation System</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">4</span>
+              <p>Quality Dimensions</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Evidence Quality Scoring</span>
+            <span>DRI Accountability</span>
+            <span>Segregation of Duties</span>
+            <span>Audit Trail</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 2: Risk Management -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Risk</span>
+            <span class="project-card__number">02</span>
+          </div>
+          <h3 class="project-card__title">Enterprise Risk Register & Assessment</h3>
+          <p class="project-card__desc">Designed the SaaS platform's risk register — a structured inventory of all identified security threats. Risks are organized across 5 categories (Engineering, Operational, Vendor, Legal & Regulatory, Business), scored on a 5x5 matrix (how likely it is vs. how much damage it could cause), and tracked from initial identification through to resolution.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span>
+              <p>Risk Categories</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">x5</span>
+              <p>Scoring Matrix</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Risk Scoring</span>
+            <span>Heat Map</span>
+            <span>Mitigation Tracking</span>
+            <span>Residual Risk</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 3: Gap Detection -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Compliance</span>
+            <span class="project-card__number">03</span>
+          </div>
+          <h3 class="project-card__title">Gap Assessment & Remediation Tracking</h3>
+          <p class="project-card__desc">Designed structured gap assessments — systematic checks that find what's missing or incomplete in your security posture. The system detects 6 types of gaps across all 12 frameworks: missing implementations, missing evidence, partial coverage, expired evidence, unassigned ownership, and missing documentation. Each gap is ranked by severity and tracked with deadlines until resolved.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">6</span>
+              <p>Gap Types Identified</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">12</span>
+              <p>Frameworks Assessed</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Gap Analysis</span>
+            <span>Severity Classification</span>
+            <span>Remediation SLAs</span>
+            <span>Trend Tracking</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 4: Compliance Reporting & Audit Readiness -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Analytics</span>
+            <span class="project-card__number">04</span>
+          </div>
+          <h3 class="project-card__title">Compliance Reporting & Audit Readiness</h3>
+          <p class="project-card__desc">Designed compliance scoring per framework, performance tracking for evidence submitters, reviewer deadline monitoring, and automated report delivery. Includes a structured Auditor Workbook — a ready-made package covering compliance status, risks, evidence, and gap analysis across all 434 controls that auditors can review directly.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">434</span>
+              <p>Controls Tracked</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span>
+              <p>Report Types</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Compliance Scoring</span>
+            <span>Auditor Workbook</span>
+            <span>Trend Analysis</span>
+            <span>Scheduled Reports</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 5: Risk Treatment & Monitoring -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Risk</span>
+            <span class="project-card__number">05</span>
+          </div>
+          <h3 class="project-card__title">Risk Treatment, KRI Monitoring & Escalation</h3>
+          <p class="project-card__desc">Designed a risk treatment workflow with 4 options for handling identified risks — Mitigate (fix it), Accept (acknowledge it), Transfer (insure against it), or Avoid (eliminate the activity). Risks move through a 6-state lifecycle from identification to closure. 5 Key Risk Indicators (KRIs) provide ongoing monitoring, and a 3-level auto-escalation engine ensures Critical and High risks get leadership attention automatically.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">18</span>
+              <p>Risks Pre-Loaded</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span>
+              <p>KRI Indicators</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Risk Treatment</span>
+            <span>KRI Monitoring</span>
+            <span>Auto-Escalation</span>
+            <span>Risk Appetite</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 6: DPIA Module -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Privacy</span>
+            <span class="project-card__number">06</span>
+          </div>
+          <h3 class="project-card__title">Data Protection Impact Assessment (DPIA)</h3>
+          <p class="project-card__desc">Designed a structured 4-step DPIA process — a formal assessment required by privacy laws when processing sensitive personal data. The steps cover: describing what data is being processed, assessing privacy risks, documenting protective measures, and routing for Data Protection Officer (DPO) approval. Linked directly to the risk register and control library for GDPR, HIPAA, and ISO 27701 compliance.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">4</span><span class="project-card__metric-plus">-step</span>
+              <p>DPIA Wizard</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">3</span>
+              <p>Frameworks Aligned</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>GDPR Art. 35</span>
+            <span>Privacy Risk</span>
+            <span>DPO Approval</span>
+            <span>Risk Linkage</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 7: GRC Scoring & Maturity Systems -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">Governance</span>
+            <span class="project-card__number">07</span>
+          </div>
+          <h3 class="project-card__title">GRC Scoring & Control Maturity Systems</h3>
+          <p class="project-card__desc">Designed 6 interconnected scoring systems that automatically measure compliance health — Risk scoring (5x5 matrix), Evidence Quality (grading from A to F across 4 dimensions), Control Health, Gap Priority, overall Compliance Score, and a 5-level Maturity Model (from ad-hoc processes to fully optimized). Controls are also classified by tier: Product (171), Platform (91), and Organizational (165).</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">6</span>
+              <p>Scoring Systems</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">-level</span>
+              <p>Maturity Model</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Compliance Scoring</span>
+            <span>Control Maturity</span>
+            <span>Evidence Grading</span>
+            <span>Tier Classification</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+        <!-- Project 8: AI-Assisted Compliance -->
+        <div class="project-card glass-card" data-tilt data-reveal>
+          <div class="project-card__gradient"></div>
+          <div class="project-card__header">
+            <span class="project-card__tag">AI-GRC</span>
+            <span class="project-card__number">08</span>
+          </div>
+          <h3 class="project-card__title">AI-Assisted Compliance & Evidence Automation</h3>
+          <p class="project-card__desc">Designed AI-powered features to automate evidence quality scoring across 4 dimensions (completeness, freshness, format, coverage), detect unusual patterns in how controls are implemented, and generate audit-readiness recommendations — helping reduce manual review effort and improve consistency of compliance assessments across 434 controls and 12 frameworks.</p>
+          <div class="project-card__results">
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">4</span>
+              <p>AI Scoring Dimensions</p>
+            </div>
+            <div class="project-card__metric">
+              <span class="project-card__metric-number">434</span>
+              <p>Controls Analyzed</p>
+            </div>
+          </div>
+          <div class="project-card__tools">
+            <span>Evidence Auto-Scoring</span>
+            <span>Anomaly Detection</span>
+            <span>ISO 42001 Aligned</span>
+            <span>Audit Recommendations</span>
+          </div>
+          <a href="#contact" class="project-card__link project-card__link--private">
+            <i data-lucide="lock"></i> Documentation available on request
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="section" id="case-studies">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="file-search"></i> Case Studies</span>
+        <h2 class="section__title">Risk in <span class="gradient-text">Practice</span></h2>
+        <p class="section__subtitle">Step-by-step walkthroughs of real compliance challenges — from identifying the problem through designing the solution to measurable results.</p>
+      </div>
+
+      <!-- Case Study 1 -->
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
+          <span class="case-study__number">01</span>
+          <div>
+            <h3 class="case-study__title">Enterprise Risk Assessment for a Multi-Framework SaaS Platform</h3>
+            <div class="case-study__tags">
+              <span>Risk Assessment</span>
+              <span>5x5 Matrix</span>
+              <span>SaaS</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
+        </div>
+        <div class="case-study__body">
+        <div class="case-study__grid">
+          <div class="case-study__block">
+            <h4><i data-lucide="info"></i> Context</h4>
+            <p>A cloud software platform (SaaS) certified across 12 compliance frameworks (SOC 2, ISO 27001, GDPR, HIPAA, and 8 others) needed a structured way to identify and track security risks. The platform handles sensitive customer data — making risk identification and scoring critical for passing audits.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="alert-triangle"></i> Problem</h4>
+            <p>No formal list of risks existed. Risk decisions were reactive — the team only dealt with risks when auditors pointed them out, not before. There was no consistent way to score how serious a risk was, no one was formally responsible for each risk, and there was no way to track whether actions taken were actually reducing the danger over time.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="compass"></i> Approach</h4>
+            <p>Designed a structured risk assessment covering 5 risk categories: Engineering, Operational, Vendor, Legal & Regulatory, and Business. Each risk is scored on a 5x5 matrix — measuring how likely it is to happen (1-5) multiplied by how much damage it could cause (1-5) — giving a score from 1 to 25. Risks are auto-classified into 5 severity levels (Critical, High, Medium, Low, Negligible) and assigned to a named owner with a plan and target date to address them.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="lock"></i> Safeguards Put in Place</h4>
+            <ul>
+              <li>Role-based access control (who can see and do what) with 4 levels and segregation of duties (no one person can both submit and approve)</li>
+              <li>Per-risk tracking with an assigned owner, due dates, and residual risk calculation (the remaining risk after safeguards are applied)</li>
+              <li>Weekly automated reminders for any risk not reviewed in 90+ days — preventing risks from going stale</li>
+              <li>A visual 5x5 heat map showing all risks by severity — for quick executive and auditor review</li>
+            </ul>
+          </div>
+          <div class="case-study__block case-study__block--outcome">
+            <h4><i data-lucide="check-circle"></i> Outcome</h4>
+            <p>Established a structured risk register with 18 identified risks across all 5 categories. Each risk has a named owner, documented action plan, and residual risk tracking. Automated weekly reviews ensure no risk goes stale. The visual heat map gives auditors and leadership clear visibility into the platform's risk posture — moving risk management from reactive audit findings to proactive, scored, and tracked governance.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2 -->
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
+          <span class="case-study__number">02</span>
+          <div>
+            <h3 class="case-study__title">ISO 27001 & SOC 2 Gap Assessment for SaaS Platform</h3>
+            <div class="case-study__tags">
+              <span>ISO 27001</span>
+              <span>SOC 2</span>
+              <span>Gap Analysis</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
+        </div>
+        <div class="case-study__body">
+        <div class="case-study__grid">
+          <div class="case-study__block">
+            <h4><i data-lucide="info"></i> Context</h4>
+            <p>A SaaS platform managing 434 security controls across 12 compliance frameworks needed a way to find compliance weaknesses before external auditors did. Controls (specific security rules or safeguards) were tracked across ISO 27001, SOC 2, GDPR, HIPAA, and 8 other standards — but there was no systematic way to detect gaps, rank their severity, or track fixes.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="alert-triangle"></i> Problem</h4>
+            <p>Security practices existed informally, but gaps were discovered inconsistently. Some controls were marked "implemented" without supporting evidence. Others had expired evidence or no one assigned to maintain them. These problems only surfaced during audits — when it was too late to fix them efficiently.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="compass"></i> Approach</h4>
+            <p>Designed a gap assessment methodology that detects 6 distinct gap types: Missing Implementation (control not in place), Missing Evidence (no proof it works), Partial Coverage (only partly done), Expired Evidence (proof is outdated), No Owner (nobody responsible), and No Documentation (no written procedure). Each gap is classified by severity (Critical, High, Medium, Low) and assigned to someone with a target fix date.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="shield-alert"></i> Key Gaps Found</h4>
+            <ul>
+              <li>165 controls across frameworks were "Not Implemented" — the most common gap type requiring prioritized action</li>
+              <li>163 controls were "Partially Implemented" — needing additional evidence or process completion</li>
+              <li>Controls with no assigned owner — creating accountability gaps that auditors would flag</li>
+              <li>Evidence linked to controls but past its expiry date — creating a false sense of readiness</li>
+            </ul>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="lock"></i> Remediation Delivered</h4>
+            <ul>
+              <li>Structured fix workflow: Open → In Progress → Remediated → Closed, with deadline tracking at each stage</li>
+              <li>Severity-based prioritization ensuring Critical and High gaps are addressed first</li>
+              <li>Automated notifications to the assigned person and their manager when gap status changes</li>
+              <li>Comparative assessments over time — ISO 27001 (42 gaps found) and SOC 2 (17 gaps found) run as initial baselines to measure improvement</li>
+            </ul>
+          </div>
+          <div class="case-study__block case-study__block--outcome">
+            <h4><i data-lucide="check-circle"></i> Outcome</h4>
+            <p>Established a repeatable gap assessment process across all 12 frameworks. Of 434 controls, 99 are fully implemented, 163 are partially implemented, and 165 are identified for remediation — each with assigned owners, severity classification, and tracked deadlines. Gap assessments run per-framework with comparative tracking to measure improvement over time. Auditors now receive a clear gap status report instead of discovering issues during audit.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3 -->
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
+          <span class="case-study__number">03</span>
+          <div>
+            <h3 class="case-study__title">Cross-Framework Control Mapping for 12 Compliance Standards</h3>
+            <div class="case-study__tags">
+              <span>Control Mapping</span>
+              <span>Multi-Framework</span>
+              <span>175 Mappings</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
+        </div>
+        <div class="case-study__body">
+        <div class="case-study__grid">
+          <div class="case-study__block">
+            <h4><i data-lucide="info"></i> Context</h4>
+            <p>A SaaS platform certified across 12 frameworks was managing 434 security controls independently per framework. Each framework had its own tracking, evidence collection, and audit preparation — creating massive duplication of effort. Think of it like maintaining 12 separate to-do lists that overlap significantly, but nobody knows which items are shared.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="alert-triangle"></i> Problem</h4>
+            <p>A single security requirement (like "control who can access the system") appeared as separate tasks for ISO 27001, SOC 2, GDPR, and HIPAA. Evidence was being collected multiple times for what was essentially the same rule. Audit preparation was slow because nothing was cross-referenced. Teams didn't know which security controls overlapped across frameworks.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="compass"></i> Approach</h4>
+            <p>Created 175 cross-framework control mappings across 5 primary frameworks (SOC 2, ISO 27001, GDPR, HIPAA, ISO 27701), classifying each link as one of three types: Equivalent (controls are essentially the same), Partial Overlap (similar but not identical scope), or Related (same topic, different specific requirements). This means one piece of evidence can now satisfy multiple frameworks at once.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="shield-alert"></i> Challenges Addressed</h4>
+            <ul>
+              <li>Controls that look different across frameworks but actually cover the same ground — mapped with the right relationship type</li>
+              <li>Same security concept described differently in different standards — normalized into a common language</li>
+              <li>Different evidence expectations per framework for the same underlying control</li>
+              <li>Static spreadsheet tracking causing version conflicts and outdated information</li>
+            </ul>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="lock"></i> Solution Design</h4>
+            <ul>
+              <li>175 bidirectional control mappings with 3 relationship types (Equivalent, Partial Overlap, Related)</li>
+              <li>Single evidence artifact serving multiple framework requirements — submit once, satisfy many</li>
+              <li>Per-framework compliance scoring so each framework's status is tracked independently while sharing common controls</li>
+              <li>Framework-pair matrix showing where frameworks overlap most and least — helping prioritize evidence collection</li>
+            </ul>
+          </div>
+          <div class="case-study__block case-study__block--outcome">
+            <h4><i data-lucide="check-circle"></i> Outcome</h4>
+            <p>Established 175 cross-framework mappings across the platform's 12 frameworks, eliminating duplicate evidence collection for overlapping controls. Each of the 434 controls now links to its framework-specific rule, associated risk, evidence, and responsible person. Audit preparation improved because auditors can see cross-framework coverage in a single view. The mapping is maintained as a living system — not a static spreadsheet.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4 -->
+      <div class="case-study glass-card case-study--accordion" data-reveal>
+        <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
+          <span class="case-study__number">04</span>
+          <div>
+            <h3 class="case-study__title">Development Lifecycle Security — Compliance by Design for SaaS Releases</h3>
+            <div class="case-study__tags">
+              <span>SDLC Governance</span>
+              <span>Compliance by Design</span>
+              <span>SaaS Platform</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-down" class="case-study__toggle"></i>
+        </div>
+        <div class="case-study__body">
+        <div class="case-study__grid">
+          <div class="case-study__block">
+            <h4><i data-lucide="info"></i> Context</h4>
+            <p>A SaaS platform certified across 12 compliance frameworks ships frequent feature updates. Every release needs to meet security, privacy, and regulatory requirements — but compliance was being treated as something checked after release, not during development. Think of it like only checking if a building meets fire codes after it's already built.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="alert-triangle"></i> Problem</h4>
+            <p>No structured security review existed within the development process. Compliance checks happened after features shipped — not during development. There was no system to track which security checkpoints each release had passed or failed. Problems were discovered during audits, not during development — when they're much more expensive and disruptive to fix.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="compass"></i> Approach</h4>
+            <p>Designed a 7-phase security pipeline for the development lifecycle — with mandatory checkpoints at each stage. Each checkpoint has trigger-based assessments (data, privacy, security, regulatory, AI) that are evaluated per release. Results are tracked as pass/fail with risk ratings and grouped by release version so auditors can see the full picture.</p>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="shield-alert"></i> The 7 Security Phases</h4>
+            <ul>
+              <li><strong>Requirements:</strong> Security and privacy needs identified before development begins</li>
+              <li><strong>Design:</strong> Security built into the architecture — identifying threats and selecting the right safeguards</li>
+              <li><strong>Development:</strong> Secure coding practices verified — proper data handling, encryption, input validation</li>
+              <li><strong>Testing:</strong> Security testing confirms access controls, logging, and data handling work correctly</li>
+              <li><strong>Deployment:</strong> Formal approval and change management sign-off before going live</li>
+              <li><strong>Maintenance:</strong> Ongoing monitoring and security patches after release</li>
+              <li><strong>Decommission:</strong> Secure data disposal when features are retired</li>
+            </ul>
+          </div>
+          <div class="case-study__block">
+            <h4><i data-lucide="lock"></i> How It Works in Practice</h4>
+            <ul>
+              <li>Each platform release is logged with checkpoints across relevant phases</li>
+              <li>Each checkpoint is assessed per release — pass or fail, with risk rating and notes</li>
+              <li>Failed assessments trigger automated daily alerts so nothing gets missed</li>
+              <li>A per-release view groups all assessments so auditors can verify compliance for each version</li>
+              <li>5 trigger types (data, privacy, security, regulatory, AI) determine which checkpoints apply</li>
+            </ul>
+          </div>
+          <div class="case-study__block case-study__block--outcome">
+            <h4><i data-lucide="check-circle"></i> Outcome</h4>
+            <p>Established a fully operational security pipeline for the development lifecycle — 7 phases, mandatory checkpoints per phase, and trigger-based assessments per release. Auditors now have a per-release compliance view that satisfies SOC 2, ISO 27001, and ISO 9001 requirements for secure development and change management. Compliance shifted from a post-release problem to a built-in development gate — security by design, not by afterthought.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="graduation-cap"></i> Education</span>
+        <h2 class="section__title">Academic <span class="gradient-text">Background</span></h2>
+        <p class="section__subtitle">A foundation in technology, shaped by diverse experiences beyond the classroom.</p>
+      </div>
+
+      <div class="education__grid">
+        <div class="edu-card edu-card--wide glass-card" data-tilt data-reveal>
+          <div class="edu-card__gradient-border"></div>
+          <div class="edu-card__icon-wrap">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+          <h3>Bachelor of Technology — Information Technology</h3>
+          <div class="edu-card__school">
+            <i data-lucide="building-2"></i>
+            <span>Francis Xavier Engineering College</span>
+          </div>
+          <span class="edu-card__year">Sep 2018 — Jul 2022</span>
+          <p class="edu-card__detail">
+            A technology foundation complemented by diverse extracurricular roles — bridging technical knowledge with leadership, communication, and community involvement.
+          </p>
+          <div class="edu-card__highlights">
+            <span class="edu-card__badge"><i data-lucide="cpu"></i> ML Intern</span>
+            <span class="edu-card__badge"><i data-lucide="megaphone"></i> IIT Bombay Techfest Rep</span>
+            <span class="edu-card__badge"><i data-lucide="mic"></i> Soft Skill Trainer</span>
+            <span class="edu-card__badge"><i data-lucide="heart"></i> Women's Dev Club</span>
+            <span class="edu-card__badge"><i data-lucide="globe"></i> IAENG Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG / PUBLICATIONS ============ -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="rss"></i> Blog & Newsletter</span>
+        <h2 class="section__title">My <span class="gradient-text">Writing</span></h2>
+        <p class="section__subtitle">Compliance insights, audit breakdowns, and security thinking — written to make complex topics accessible.</p>
+      </div>
+
+      <div class="blog__grid">
+        <!-- Newsletter -->
+        <div class="blog-card glass-card" data-reveal>
+          <div class="blog-card__image">
+            <div class="blog-card__image-placeholder">
+              <i data-lucide="newspaper"></i>
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">Newsletter</span>
+              <span class="blog-card__date">
+                <i data-lucide="calendar"></i>
+                Ongoing
+              </span>
+            </div>
+            <h3 class="blog-card__title">The Unwritten Rules of GRC</h3>
+            <p class="blog-card__excerpt">A LinkedIn newsletter breaking down why security rules exist, how audits work in practice, and how organizations build trust through effective compliance.</p>
+            <a href="https://www.linkedin.com/newsletters/the-unwritten-rules-of-grc-7419717856528850944/" target="_blank" class="blog-card__link">
+              Subscribe on LinkedIn
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Substack -->
+        <div class="blog-card glass-card" data-reveal>
+          <div class="blog-card__image">
+            <div class="blog-card__image-placeholder">
+              <i data-lucide="rss"></i>
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">GRCNexis</span>
+              <span class="blog-card__date">
+                <i data-lucide="calendar"></i>
+                2025
+              </span>
+            </div>
+            <h3 class="blog-card__title">GRCNexis on Substack</h3>
+            <p class="blog-card__excerpt">Long-form articles on governance, risk, and compliance — written to make complex security frameworks understandable. From audit walkthroughs to how security safeguards are designed.</p>
+            <a href="https://grcnexis.substack.com" target="_blank" class="blog-card__link">
+              Read on Substack
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <span class="section__tag"><i data-lucide="mail"></i> Contact</span>
+        <h2 class="section__title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section__subtitle">Whether you're looking for guidance in security, compliance, or privacy — or just want to talk about governance and risk — feel free to reach out.</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__form glass-card" data-reveal>
+          <h3 class="contact__form-title">Send a Message</h3>
+          <form id="contactForm" action="https://formspree.io/f/xojkbybq" method="POST">
+            <div class="form__row">
+              <div class="form__group">
+                <label>
+                  <i data-lucide="user"></i>
+                  Name
+                </label>
+                <input type="text" name="name" placeholder="Your full name" required>
+              </div>
+              <div class="form__group">
+                <label>
+                  <i data-lucide="mail"></i>
+                  Email
+                </label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label>
+                <i data-lucide="tag"></i>
+                Subject
+              </label>
+              <select name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="GRC Mentoring">GRC Mentoring</option>
+                <option value="Compliance Consulting">Compliance Consulting</option>
+                <option value="Audit Guidance">Audit Guidance</option>
+                <option value="Career Advice">Career Advice</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Project Documentation Request">Project Documentation Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label>
+                <i data-lucide="message-square"></i>
+                Message
+              </label>
+              <textarea name="message" placeholder="Tell me about your question or how I can help..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">
+              <span>Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+          <div class="contact__form-status" id="formStatus"></div>
+        </div>
+
+        <div class="contact__availability glass-card" data-reveal>
+          <span class="contact__availability-dot"></span>
+          Available for mentoring, consulting, and collaboration opportunities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLOATING SOCIAL SIDEBAR ============ -->
+  <aside class="social-sidebar" id="socialSidebar">
+    <div class="social-sidebar__line"></div>
+    <a href="mailto:sathyasivam.ps@gmail.com" class="social-sidebar__icon" aria-label="Email" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </a>
+    <a href="https://linkedin.com/in/sathya-sivam" target="_blank" class="social-sidebar__icon" aria-label="LinkedIn" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://topmate.io/sathya_sivam" target="_blank" class="social-sidebar__icon" aria-label="Topmate" title="Topmate">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 46"><circle r="22.5" transform="matrix(1 0 0 -1 23.615 23)" fill="#E44332"/><path d="M33 29.64C31.57 31.67 29.52 33.18 27.16 33.94 24.8 34.7 22.25 34.69 19.9 33.89 17.56 33.08 15.53 31.55 14.13 29.5 12.72 27.45 12.02 25 12.13 22.52 12.23 20.05 13.13 17.67 14.7 15.74 16.26 13.82 18.41 12.45 20.82 11.85 23.22 11.24 25.76 11.43 28.05 12.39 30.34 13.35 32.26 15.02 33.52 17.16L23.62 23 33 29.64Z" fill="#FEF7F7"/></svg>
+    </a>
+    <a href="https://github.com/SathyaSivam-GRCNexis" target="_blank" class="social-sidebar__icon" aria-label="GitHub" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="https://grcnexis.substack.com" target="_blank" class="social-sidebar__icon" aria-label="Substack" title="Substack">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+    </a>
+    <div class="social-sidebar__line"></div>
+  </aside>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <svg class="nav__logo-shield" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+          <div>
+            <span class="footer__brand-name">Shree Sathya</span>
+            <span class="footer__brand-role">GRC Analyst</span>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#mindset">Mindset</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#blog">Insights</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer__socials">
         <a href="mailto:sathyasivam.ps@gmail.com" aria-label="Email" title="Email">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
@@ -133,1280 +1421,13 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
         </a>
       </div>
-      <p class="sidebar__copyright">&copy; 2026 Shree Sathya</p>
-    </div>
-  </aside>
 
-  <!-- ============ MOBILE SIDEBAR TOGGLE ============ -->
-  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Mobile Overlay -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-
-  <!-- ============ MAIN CONTENT ============ -->
-  <main class="main" id="mainContent">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="hero__bg">
-        <div class="hero__orb hero__orb--1"></div>
-        <div class="hero__orb hero__orb--2"></div>
-        <div class="hero__orb hero__orb--3"></div>
-        <div class="hero__grid-overlay"></div>
-      </div>
-
-      <!-- Floating badges -->
-      <div class="hero__floating hero__floating--1">
-        <i data-lucide="shield-check"></i>
-        <span>ISO 27001 Lead Auditor</span>
-      </div>
-      <div class="hero__floating hero__floating--2">
-        <i data-lucide="lock"></i>
-        <span>GDPR & HIPAA</span>
-      </div>
-      <div class="hero__floating hero__floating--3">
-        <i data-lucide="file-check"></i>
-        <span>SEBI</span>
-      </div>
-
-      <div class="hero__content">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          Bringing the Ocean to the Table — Empowering Compliance, One Wave at a Time
-        </div>
-
-        <div class="hero__title">
-          <div class="hero__title-line">
-            <span class="hero__title-word hero__title-word--outline">GRC</span>
-          </div>
-          <div class="hero__title-line">
-            <span class="hero__title-word gradient-text">Analyst</span>
-          </div>
-        </div>
-
-        <div class="hero__info">
-          <div class="hero__subtitle">
-             I help organizations find security risks, put protective measures in place, and stay ready for audits — across cloud software platforms.
-            <span class="hero__typed" id="heroTyped"></span>
-          </div>
-        </div>
-
-        <div class="hero__actions">
-          <a href="#case-studies" class="btn btn--primary magnetic">
-            <span>View Case Studies</span>
-            <i data-lucide="arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn--glass magnetic">
-            <span>Let's Talk</span>
-            <i data-lucide="message-circle"></i>
-          </a>
-          <a href="#" class="btn btn--icon magnetic" title="Download Resume">
-            <i data-lucide="download"></i>
-          </a>
-          <a href="compliance-philosophy.html" class="btn btn--icon magnetic" title="Compliance Philosophy" target="_blank">
-            <i data-lucide="file-text"></i>
-          </a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="hero__stat glass-card" data-reveal>
-            <div class="hero__stat-icon"><i data-lucide="calendar"></i></div>
-            <span class="hero__stat-number" data-count="4">0</span>
-            <span class="hero__stat-label">Years<br>Experience</span>
-          </div>
-          <div class="hero__stat glass-card" data-reveal>
-            <div class="hero__stat-icon"><i data-lucide="search"></i></div>
-            <span class="hero__stat-number" data-count="40">0</span>
-            <span class="hero__stat-label">Audits<br>Led & Conducted</span>
-          </div>
-          <div class="hero__stat glass-card" data-reveal>
-            <div class="hero__stat-icon"><i data-lucide="layers"></i></div>
-            <span class="hero__stat-number" data-count="12">0</span>
-            <span class="hero__stat-label">Compliance<br>Frameworks</span>
-          </div>
-          <div class="hero__stat glass-card" data-reveal>
-            <div class="hero__stat-icon"><i data-lucide="award"></i></div>
-            <span class="hero__stat-number" data-count="7">0</span>
-            <span class="hero__stat-label">Professional<br>Certifications</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__scroll-indicator">
-        <div class="hero__scroll-mouse">
-          <div class="hero__scroll-wheel"></div>
-        </div>
-        <span>Scroll to explore</span>
-      </div>
-    </section>
-
-    <!-- ============ MARQUEE STRIP ============ -->
-    <div class="marquee">
-      <div class="marquee__track">
-        <div class="marquee__content">
-          <span>SOC 2</span><span class="marquee__dot"></span>
-          <span>ISO 27001</span><span class="marquee__dot"></span>
-          <span>GDPR</span><span class="marquee__dot"></span>
-          <span>HIPAA</span><span class="marquee__dot"></span>
-          <span>ISO 27701</span><span class="marquee__dot"></span>
-          <span>ISO 27017</span><span class="marquee__dot"></span>
-          <span>ISO 27018</span><span class="marquee__dot"></span>
-          <span>ISO 9001</span><span class="marquee__dot"></span>
-          <span>ISO 22301</span><span class="marquee__dot"></span>
-          <span>ENS</span><span class="marquee__dot"></span>
-          <span>CSA STAR</span><span class="marquee__dot"></span>
-          <span>NIST 800-53</span><span class="marquee__dot"></span>
-          <span>SEBI</span><span class="marquee__dot"></span>
-          <span>Risk Assessment</span><span class="marquee__dot"></span>
-        </div>
-        <div class="marquee__content" aria-hidden="true">
-          <span>SOC 2</span><span class="marquee__dot"></span>
-          <span>ISO 27001</span><span class="marquee__dot"></span>
-          <span>GDPR</span><span class="marquee__dot"></span>
-          <span>HIPAA</span><span class="marquee__dot"></span>
-          <span>ISO 27701</span><span class="marquee__dot"></span>
-          <span>ISO 27017</span><span class="marquee__dot"></span>
-          <span>ISO 27018</span><span class="marquee__dot"></span>
-          <span>ISO 9001</span><span class="marquee__dot"></span>
-          <span>ISO 22301</span><span class="marquee__dot"></span>
-          <span>ENS</span><span class="marquee__dot"></span>
-          <span>CSA STAR</span><span class="marquee__dot"></span>
-          <span>NIST 800-53</span><span class="marquee__dot"></span>
-          <span>SEBI</span><span class="marquee__dot"></span>
-          <span>Risk Assessment</span><span class="marquee__dot"></span>
-          <span>Data Privacy</span><span class="marquee__dot"></span>
-          <span>Incident Response</span><span class="marquee__dot"></span>
-          <span>Policy Development</span><span class="marquee__dot"></span>
-          <span>Gap Analysis</span><span class="marquee__dot"></span>
-        </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shree Sathya. All rights reserved.</p>
+        <p class="footer__note">Bringing the Ocean to the Table — Empowering Compliance, One Wave at a Time.</p>
       </div>
     </div>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="user"></i> About Me</span>
-          <h2 class="section__title">Risk-Driven.<br><span class="gradient-text">Audit-Ready.</span></h2>
-          <p class="section__subtitle">I don't just document compliance (meeting security rules). I find risks, put safeguards in place, and make sure organizations are always ready for audits.</p>
-        </div>
-
-        <div class="about__grid">
-          <div data-reveal>
-            <p class="about__intro">
-              I'm <span class="highlight-text">Shree Sathya</span> — a GRC Analyst at Zoho Corporation with 4 years of experience helping organizations manage security, risk, and compliance for cloud software platforms.
-            </p>
-            <p class="about__text">
-              My day-to-day work is about finding business risks, putting protective measures (called "controls") in place, and closing gaps before auditors find them. I've led and represented 40+ audits — internal reviews, external certifications, and customer security assessments — across standards like ISO 27001, GDPR, HIPAA, SOC 2, and SEBI. I also act as an internal auditor, conducting independent audit reviews.
-            </p>
-            <p class="about__text">
-              I manage compliance for a SaaS platform across 12 international security and privacy standards — building risk registers (lists of identified threats), running gap assessments (finding what's missing), creating cross-framework mappings (linking overlapping requirements), and designing evidence collection workflows. Across 434 controls and 12 frameworks, my focus is on making compliance a sustainable daily practice — not just a once-a-year audit exercise.
-            </p>
-
-            <div class="about__cards">
-              <div class="about__card glass-card" data-reveal>
-                <i data-lucide="target"></i>
-                <div>
-                  <strong>Risk-First Approach</strong>
-                  <p>Every security decision starts with understanding what could go wrong and how it would affect the business.</p>
-                </div>
-              </div>
-              <div class="about__card glass-card" data-reveal>
-                <i data-lucide="git-branch"></i>
-                <div>
-                  <strong>Practical Implementation</strong>
-                  <p>Turning security rules from standards documents into real, everyday processes that teams can actually follow.</p>
-                </div>
-              </div>
-              <div class="about__card glass-card" data-reveal>
-                <i data-lucide="search"></i>
-                <div>
-                  <strong>Audit-Ready Mindset</strong>
-                  <p>Building processes that can withstand external review at any time — not just during audit season.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ HOW I THINK ============ -->
-    <section class="section" id="mindset">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="brain"></i> GRC Mindset</span>
-          <h2 class="section__title">How I <span class="gradient-text">Think</span></h2>
-          <p class="section__subtitle">The principles that guide how I approach every security review, risk assessment, and audit.</p>
-        </div>
-
-        <div class="mindset__grid">
-          <div class="mindset-card glass-card" data-reveal>
-            <div class="mindset-card__number">01</div>
-            <h3 class="mindset-card__title">Risk Before Compliance</h3>
-            <p class="mindset-card__text">I never start with a checklist. I start with the question: <em>"What can go wrong, and how would it affect the business?"</em> When I assessed risks for a SaaS platform across 5 categories (Engineering, Operational, Vendor, Legal, Business), every security decision was driven by a scored risk — not by which rule came next in a standards document.</p>
-          </div>
-
-          <div class="mindset-card glass-card" data-reveal>
-            <div class="mindset-card__number">02</div>
-            <h3 class="mindset-card__title">Severity-Based Prioritization</h3>
-            <p class="mindset-card__text">Not all gaps are equally urgent. When I found 6 types of compliance gaps across 12 frameworks, I classified each by severity — Critical, High, Medium, Low. A missing security safeguard protecting customer data is Critical. A missing documentation link is Low. Resources go where the risk is highest.</p>
-          </div>
-
-          <div class="mindset-card glass-card" data-reveal>
-            <div class="mindset-card__number">03</div>
-            <h3 class="mindset-card__title">Governance by Design</h3>
-            <p class="mindset-card__text">Security should be built into how teams work — not added after the fact. When I designed security checkpoints for a SaaS platform's development process, I placed compliance gates at every phase with 5 trigger types. This means security is checked during development, not discovered as a problem after release.</p>
-          </div>
-
-          <div class="mindset-card glass-card" data-reveal>
-            <div class="mindset-card__number">04</div>
-            <h3 class="mindset-card__title">Evidence-Driven, Not Opinion-Driven</h3>
-            <p class="mindset-card__text">Every finding I raise is backed by proof. When tracking compliance across 434 controls, I score evidence on 4 dimensions — completeness, freshness, format, and coverage — with quality grades from A to F. If the evidence quality is poor, the control gets flagged regardless of what the responsible person claims. Audits should be objective, not based on assumptions.</p>
-          </div>
-
-          <div class="mindset-card glass-card" data-reveal>
-            <div class="mindset-card__number">05</div>
-            <h3 class="mindset-card__title">Translate Risk Into Business Language</h3>
-            <p class="mindset-card__text">A risk list that leadership can't understand is a risk list that gets ignored. When presenting to stakeholders, I translate technical security risks into business terms — potential revenue impact, regulatory fines, and customer trust. The risk heat map I designed isn't just for analysts — it gives executives a quick view of where the organization stands, what's being addressed, and what needs urgent attention.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SKILLS & CERTIFICATIONS ============ -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="layers"></i> Skills & Certifications</span>
-          <h2 class="section__title">Core <span class="gradient-text">Competencies</span></h2>
-          <p class="section__subtitle">Core expertise across security governance, risk management, privacy, compliance operations, and AI-enabled workflows.</p>
-        </div>
-
-        <div class="skills-categories">
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="file-text"></i></div>
-              <h3 class="skill-category__title">Frameworks & Standards</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">ISO 27001</span>
-              <span class="skill-tag">ISO 27701</span>
-              <span class="skill-tag">ISO 27017</span>
-              <span class="skill-tag">ISO 27018</span>
-              <span class="skill-tag">ISO 9001</span>
-              <span class="skill-tag">ISO 22301</span>
-              <span class="skill-tag">ISO 42001</span>
-              <span class="skill-tag">SOC 2</span>
-              <span class="skill-tag">CSA STAR</span>
-              <span class="skill-tag">NIST 800-53</span>
-              <span class="skill-tag">GDPR</span>
-              <span class="skill-tag">HIPAA</span>
-              <span class="skill-tag">DPDPA</span>
-              <span class="skill-tag">SEBI</span>
-              <span class="skill-tag">ENS</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="activity"></i></div>
-              <h3 class="skill-category__title">Risk Management</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">Enterprise Risk Assessment</span>
-              <span class="skill-tag">Gap Analysis</span>
-              <span class="skill-tag">Risk Register</span>
-              <span class="skill-tag">5x5 Scoring Matrix</span>
-              <span class="skill-tag">KRI Monitoring</span>
-              <span class="skill-tag">Mitigation Tracking</span>
-              <span class="skill-tag">Risk Appetite</span>
-              <span class="skill-tag">Residual Risk</span>
-              <span class="skill-tag">Incident Response</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="shield-check"></i></div>
-              <h3 class="skill-category__title">Privacy & Data Protection</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">DPIA</span>
-              <span class="skill-tag">Data Mapping</span>
-              <span class="skill-tag">Privacy Impact Assessment</span>
-              <span class="skill-tag">Data Flow Analysis</span>
-              <span class="skill-tag">GDPR Implementation</span>
-              <span class="skill-tag">HIPAA Privacy Rules</span>
-              <span class="skill-tag">SEBI Compliance</span>
-              <span class="skill-tag">DPDPA Compliance</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="search"></i></div>
-              <h3 class="skill-category__title">Audit & Compliance Operations</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">Internal Audit</span>
-              <span class="skill-tag">External Audit</span>
-              <span class="skill-tag">Customer Audit</span>
-              <span class="skill-tag">Evidence Lifecycle</span>
-              <span class="skill-tag">Control Mapping</span>
-              <span class="skill-tag">Compliance Scoring</span>
-              <span class="skill-tag">Policy Development</span>
-              <span class="skill-tag">Audit Readiness</span>
-              <span class="skill-tag">SLA Tracking</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="bot"></i></div>
-              <h3 class="skill-category__title">AI & GRC Innovation</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">AI-Assisted Compliance</span>
-              <span class="skill-tag">Evidence Quality Scoring</span>
-              <span class="skill-tag">Anomaly Detection</span>
-              <span class="skill-tag">AI Security (CAISR)</span>
-              <span class="skill-tag">ISO 42001 AI Management</span>
-              <span class="skill-tag">Audit Readiness Scoring</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass-card" data-reveal>
-            <div class="skill-category__header">
-              <div class="skill-category__icon"><i data-lucide="users"></i></div>
-              <h3 class="skill-category__title">Leadership & Communication</h3>
-            </div>
-            <div class="skill-category__tags">
-              <span class="skill-tag">GRC Thought Leadership</span>
-              <span class="skill-tag">1:1 Mentoring</span>
-              <span class="skill-tag">Stakeholder Communication</span>
-              <span class="skill-tag">Training & Awareness</span>
-              <span class="skill-tag">Cross-Functional Collaboration</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Certifications -->
-        <div class="certifications" data-reveal>
-          <h3 class="certifications__title">
-            <i data-lucide="award"></i>
-            Professional Certifications
-          </h3>
-          <div class="certifications__grid">
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>ISO/IEC 27001:2022 Lead Auditor</strong><p>CQI and IRCA Certified — BSI</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>BSI Group</strong></div>
-                  <div class="cert-flip__detail"><span>Scheme</span><strong>CQI-IRCA Certified</strong></div>
-                  <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>ISO/IEC 42001:2023 Lead Auditor</strong><p>AI Management Systems — Mastermind</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>Mastermind</strong></div>
-                  <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 42001:2023</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>AI Management Systems</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>CSA STAR Lead Auditor</strong><p>Trained — BSI Training Academy</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>BSI Training Academy</strong></div>
-                  <div class="cert-flip__detail"><span>Standard</span><strong>CSA STAR</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>Cloud Security Assurance</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Lead Auditor</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>CAISR</strong><p>Certified AI Security & Risk — Red Team Leaders</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>Red Team Leaders</strong></div>
-                  <div class="cert-flip__detail"><span>Certification</span><strong>CAISR</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>AI Security & Risk</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>ISO/IEC 27001:2022 Internal Auditor</strong><p>Information Security — TÜV SÜD</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
-                  <div class="cert-flip__detail"><span>Standard</span><strong>ISO/IEC 27001:2022</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>Information Security</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>ISO 9001:2015 Internal Auditor</strong><p>Quality Management — TÜV SÜD</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Provider</span><strong>TÜV SÜD</strong></div>
-                  <div class="cert-flip__detail"><span>Standard</span><strong>ISO 9001:2015</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>Quality Management</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Internal Auditor</strong></div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-flip">
-              <div class="cert-flip__inner">
-                <div class="cert-flip__front glass-card">
-                  <i data-lucide="check-circle"></i>
-                  <div><strong>DPDPA Certified</strong><p>Digital Personal Data Protection Act — India</p></div>
-                </div>
-                <div class="cert-flip__back glass-card">
-                  <div class="cert-flip__detail"><span>Regulation</span><strong>DPDPA 2023</strong></div>
-                  <div class="cert-flip__detail"><span>Jurisdiction</span><strong>India</strong></div>
-                  <div class="cert-flip__detail"><span>Focus</span><strong>Personal Data Protection</strong></div>
-                  <div class="cert-flip__detail"><span>Type</span><strong>Professional Cert</strong></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="briefcase"></i> Experience</span>
-          <h2 class="section__title">Professional <span class="gradient-text">Journey</span></h2>
-          <p class="section__subtitle">Growing from intern to compliance professional through hands-on audits, real-world security challenges, and cross-team collaboration.</p>
-        </div>
-
-        <div class="timeline timeline--split">
-          <div class="timeline__line">
-            <div class="timeline__line-fill" id="timelineLineFill"></div>
-          </div>
-
-          <!-- Experience 1 -->
-          <div class="timeline__item timeline__item--right" data-reveal>
-            <div class="timeline__marker">
-              <div class="timeline__marker-dot"></div>
-              <div class="timeline__marker-pulse"></div>
-            </div>
-            <div class="timeline__content glass-card">
-              <div class="timeline__gradient-border"></div>
-              <div class="timeline__header-row">
-                <span class="timeline__date-badge">Sep 2022 — Present</span>
-                <span class="timeline__role-badge timeline__role-badge--senior">Full-Time</span>
-              </div>
-              <h3>Member of Technical Staff</h3>
-              <div class="timeline__company">
-                <i data-lucide="building-2"></i>
-                <span>Zoho Corporation</span>
-              </div>
-              <div class="timeline__stats">
-                <span class="timeline__stat"><strong>40+</strong> Audits Led</span>
-                <span class="timeline__stat"><strong>12</strong> Frameworks</span>
-                <span class="timeline__stat"><strong>434</strong> Controls</span>
-                <span class="timeline__stat"><strong>175</strong> Mappings</span>
-              </div>
-              <ul class="timeline__details">
-                <li>
-                  <i data-lucide="shield"></i>
-                  <span>Led and represented 40+ audits — internal reviews, external certification audits, and customer security assessments — across standards like ISO 27001, GDPR, HIPAA, and SOC 2. Also conducted independent internal audits.</span>
-                </li>
-                <li>
-                  <i data-lucide="alert-triangle"></i>
-                  <span>Performed risk assessments and gap analyses to identify security weaknesses, then built risk registers (threat inventories) and mitigation plans to address them</span>
-                </li>
-                <li>
-                  <i data-lucide="file-text"></i>
-                  <span>Led policy development and implementation — creating security rules and making sure teams across the organization follow them consistently</span>
-                </li>
-                <li>
-                  <i data-lucide="siren"></i>
-                  <span>Managed incident response (handling security events) and customer assurance processes, supporting regulatory inquiries and privacy impact assessments</span>
-                </li>
-                <li>
-                  <i data-lucide="layers"></i>
-                  <span>Designed a compliance management system for the SaaS platform — covering risk assessment, gap detection, evidence tracking, cross-framework control mapping, and development lifecycle security across 12 compliance standards with 434 controls</span>
-                </li>
-              </ul>
-              <div class="timeline__tags">
-                <span>GDPR</span>
-                <span>HIPAA</span>
-                <span>ISO 27001</span>
-                <span>SOC 2</span>
-                <span>Risk Assessment</span>
-                <span>Policy Dev</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience 2 -->
-          <div class="timeline__item timeline__item--left" data-reveal>
-            <div class="timeline__marker">
-              <div class="timeline__marker-dot"></div>
-              <div class="timeline__marker-pulse"></div>
-            </div>
-            <div class="timeline__content glass-card">
-              <div class="timeline__gradient-border"></div>
-              <div class="timeline__header-row">
-                <span class="timeline__date-badge">Jan 2022 — Aug 2022</span>
-                <span class="timeline__role-badge timeline__role-badge--junior">Internship</span>
-              </div>
-              <h3>Intern</h3>
-              <div class="timeline__company">
-                <i data-lucide="building-2"></i>
-                <span>Zoho Corporation</span>
-              </div>
-              <div class="timeline__stats">
-                <span class="timeline__stat"><strong>5+</strong> Audits Assisted</span>
-                <span class="timeline__stat"><strong>8</strong> Months</span>
-              </div>
-              <ul class="timeline__details">
-                <li>
-                  <i data-lucide="search"></i>
-                  <span>Helped identify security gaps and vulnerabilities through compliance risk assessments alongside senior team members</span>
-                </li>
-                <li>
-                  <i data-lucide="file-check"></i>
-                  <span>Supported accurate documentation of compliance processes — the written evidence that proves an organization follows its security rules</span>
-                </li>
-                <li>
-                  <i data-lucide="shield"></i>
-                  <span>Assisted in coordinating external audits by gathering and organizing the documentation auditors needed to review</span>
-                </li>
-                <li>
-                  <i data-lucide="presentation"></i>
-                  <span>Helped identify training needs across teams and assisted in creating security awareness training materials</span>
-                </li>
-                <li>
-                  <i data-lucide="clipboard-check"></i>
-                  <span>Participated in internal audits — reviewing whether the organization's security controls, processes, and procedures were working as intended</span>
-                </li>
-              </ul>
-              <div class="timeline__tags">
-                <span>Internal Audits</span>
-                <span>Risk Assessment</span>
-                <span>Training</span>
-                <span>Documentation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="folder-open"></i> Projects</span>
-          <h2 class="section__title">GRC at <span class="gradient-text">Scale</span></h2>
-          <p class="section__subtitle">Key compliance initiatives I've designed for a SaaS platform — managing risk, evidence, gaps, and audit readiness across 12 frameworks and 434 controls.</p>
-        </div>
-
-        <div class="impact-metrics" data-reveal>
-          <div class="impact-metric glass-card">
-            <div class="impact-metric__icon"><i data-lucide="layers"></i></div>
-            <span class="impact-metric__number gradient-text">434</span>
-            <span class="impact-metric__label">Security Controls Managed</span>
-          </div>
-          <div class="impact-metric glass-card">
-            <div class="impact-metric__icon"><i data-lucide="repeat"></i></div>
-            <span class="impact-metric__number gradient-text">175</span>
-            <span class="impact-metric__label">Cross-Framework Mappings</span>
-          </div>
-          <div class="impact-metric glass-card">
-            <div class="impact-metric__icon"><i data-lucide="file-text"></i></div>
-            <span class="impact-metric__number gradient-text">12</span>
-            <span class="impact-metric__label">Compliance Frameworks</span>
-          </div>
-          <div class="impact-metric glass-card">
-            <div class="impact-metric__icon"><i data-lucide="alert-triangle"></i></div>
-            <span class="impact-metric__number gradient-text">18</span>
-            <span class="impact-metric__label">Risks Identified & Tracked</span>
-          </div>
-        </div>
-
-        <div class="projects__grid">
-          <!-- Project 1: Evidence Collection & Lifecycle -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Evidence</span>
-              <span class="project-card__number">01</span>
-            </div>
-            <h3 class="project-card__title">Evidence Collection & Lifecycle Management</h3>
-            <p class="project-card__desc">Designed an end-to-end system for collecting and managing compliance evidence — the documents, screenshots, and records that prove your organization follows its security rules. Each piece of evidence is assigned to a specific person (DRI), scored for quality, reviewed by a separate person, and tracked through a 5-tier deadline escalation system to ensure nothing gets missed.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">-tier</span>
-                <p>Escalation System</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">4</span>
-                <p>Quality Dimensions</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Evidence Quality Scoring</span>
-              <span>DRI Accountability</span>
-              <span>Segregation of Duties</span>
-              <span>Audit Trail</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 2: Risk Management -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Risk</span>
-              <span class="project-card__number">02</span>
-            </div>
-            <h3 class="project-card__title">Enterprise Risk Register & Assessment</h3>
-            <p class="project-card__desc">Designed the SaaS platform's risk register — a structured inventory of all identified security threats. Risks are organized across 5 categories (Engineering, Operational, Vendor, Legal & Regulatory, Business), scored on a 5x5 matrix (how likely it is vs. how much damage it could cause), and tracked from initial identification through to resolution.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span>
-                <p>Risk Categories</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">x5</span>
-                <p>Scoring Matrix</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Risk Scoring</span>
-              <span>Heat Map</span>
-              <span>Mitigation Tracking</span>
-              <span>Residual Risk</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 3: Gap Detection -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Compliance</span>
-              <span class="project-card__number">03</span>
-            </div>
-            <h3 class="project-card__title">Gap Assessment & Remediation Tracking</h3>
-            <p class="project-card__desc">Designed structured gap assessments — systematic checks that find what's missing or incomplete in your security posture. The system detects 6 types of gaps across all 12 frameworks: missing implementations, missing evidence, partial coverage, expired evidence, unassigned ownership, and missing documentation. Each gap is ranked by severity and tracked with deadlines until resolved.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">6</span>
-                <p>Gap Types Identified</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">12</span>
-                <p>Frameworks Assessed</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Gap Analysis</span>
-              <span>Severity Classification</span>
-              <span>Remediation SLAs</span>
-              <span>Trend Tracking</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 4: Compliance Reporting & Audit Readiness -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Analytics</span>
-              <span class="project-card__number">04</span>
-            </div>
-            <h3 class="project-card__title">Compliance Reporting & Audit Readiness</h3>
-            <p class="project-card__desc">Designed compliance scoring per framework, performance tracking for evidence submitters, reviewer deadline monitoring, and automated report delivery. Includes a structured Auditor Workbook — a ready-made package covering compliance status, risks, evidence, and gap analysis across all 434 controls that auditors can review directly.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">434</span>
-                <p>Controls Tracked</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span>
-                <p>Report Types</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Compliance Scoring</span>
-              <span>Auditor Workbook</span>
-              <span>Trend Analysis</span>
-              <span>Scheduled Reports</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 5: Risk Treatment & Monitoring -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Risk</span>
-              <span class="project-card__number">05</span>
-            </div>
-            <h3 class="project-card__title">Risk Treatment, KRI Monitoring & Escalation</h3>
-            <p class="project-card__desc">Designed a risk treatment workflow with 4 options for handling identified risks — Mitigate (fix it), Accept (acknowledge it), Transfer (insure against it), or Avoid (eliminate the activity). Risks move through a 6-state lifecycle from identification to closure. 5 Key Risk Indicators (KRIs) provide ongoing monitoring, and a 3-level auto-escalation engine ensures Critical and High risks get leadership attention automatically.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">18</span>
-                <p>Risks Pre-Loaded</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span>
-                <p>KRI Indicators</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Risk Treatment</span>
-              <span>KRI Monitoring</span>
-              <span>Auto-Escalation</span>
-              <span>Risk Appetite</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 6: DPIA Module -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Privacy</span>
-              <span class="project-card__number">06</span>
-            </div>
-            <h3 class="project-card__title">Data Protection Impact Assessment (DPIA)</h3>
-            <p class="project-card__desc">Designed a structured 4-step DPIA process — a formal assessment required by privacy laws when processing sensitive personal data. The steps cover: describing what data is being processed, assessing privacy risks, documenting protective measures, and routing for Data Protection Officer (DPO) approval. Linked directly to the risk register and control library for GDPR, HIPAA, and ISO 27701 compliance.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">4</span><span class="project-card__metric-plus">-step</span>
-                <p>DPIA Wizard</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">3</span>
-                <p>Frameworks Aligned</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>GDPR Art. 35</span>
-              <span>Privacy Risk</span>
-              <span>DPO Approval</span>
-              <span>Risk Linkage</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 7: GRC Scoring & Maturity Systems -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">Governance</span>
-              <span class="project-card__number">07</span>
-            </div>
-            <h3 class="project-card__title">GRC Scoring & Control Maturity Systems</h3>
-            <p class="project-card__desc">Designed 6 interconnected scoring systems that automatically measure compliance health — Risk scoring (5x5 matrix), Evidence Quality (grading from A to F across 4 dimensions), Control Health, Gap Priority, overall Compliance Score, and a 5-level Maturity Model (from ad-hoc processes to fully optimized). Controls are also classified by tier: Product (171), Platform (91), and Organizational (165).</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">6</span>
-                <p>Scoring Systems</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">5</span><span class="project-card__metric-plus">-level</span>
-                <p>Maturity Model</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Compliance Scoring</span>
-              <span>Control Maturity</span>
-              <span>Evidence Grading</span>
-              <span>Tier Classification</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-          <!-- Project 8: AI-Assisted Compliance -->
-          <div class="project-card glass-card" data-tilt data-reveal>
-            <div class="project-card__gradient"></div>
-            <div class="project-card__header">
-              <span class="project-card__tag">AI-GRC</span>
-              <span class="project-card__number">08</span>
-            </div>
-            <h3 class="project-card__title">AI-Assisted Compliance & Evidence Automation</h3>
-            <p class="project-card__desc">Designed AI-powered features to automate evidence quality scoring across 4 dimensions (completeness, freshness, format, coverage), detect unusual patterns in how controls are implemented, and generate audit-readiness recommendations — helping reduce manual review effort and improve consistency of compliance assessments across 434 controls and 12 frameworks.</p>
-            <div class="project-card__results">
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">4</span>
-                <p>AI Scoring Dimensions</p>
-              </div>
-              <div class="project-card__metric">
-                <span class="project-card__metric-number">434</span>
-                <p>Controls Analyzed</p>
-              </div>
-            </div>
-            <div class="project-card__tools">
-              <span>Evidence Auto-Scoring</span>
-              <span>Anomaly Detection</span>
-              <span>ISO 42001 Aligned</span>
-              <span>Audit Recommendations</span>
-            </div>
-            <a href="#contact" class="project-card__link project-card__link--private">
-              <i data-lucide="lock"></i> Documentation available on request
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CASE STUDIES ============ -->
-    <section class="section" id="case-studies">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="file-search"></i> Case Studies</span>
-          <h2 class="section__title">Risk in <span class="gradient-text">Practice</span></h2>
-          <p class="section__subtitle">Step-by-step walkthroughs of real compliance challenges — from identifying the problem through designing the solution to measurable results.</p>
-        </div>
-
-        <!-- Case Study 1 -->
-        <div class="case-study glass-card case-study--accordion" data-reveal>
-          <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
-            <span class="case-study__number">01</span>
-            <div>
-              <h3 class="case-study__title">Enterprise Risk Assessment for a Multi-Framework SaaS Platform</h3>
-              <div class="case-study__tags">
-                <span>Risk Assessment</span>
-                <span>5x5 Matrix</span>
-                <span>SaaS</span>
-              </div>
-            </div>
-            <i data-lucide="chevron-down" class="case-study__toggle"></i>
-          </div>
-          <div class="case-study__body">
-          <div class="case-study__grid">
-            <div class="case-study__block">
-              <h4><i data-lucide="info"></i> Context</h4>
-              <p>A cloud software platform (SaaS) certified across 12 compliance frameworks (SOC 2, ISO 27001, GDPR, HIPAA, and 8 others) needed a structured way to identify and track security risks. The platform handles sensitive customer data — making risk identification and scoring critical for passing audits.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="alert-triangle"></i> Problem</h4>
-              <p>No formal list of risks existed. Risk decisions were reactive — the team only dealt with risks when auditors pointed them out, not before. There was no consistent way to score how serious a risk was, no one was formally responsible for each risk, and there was no way to track whether actions taken were actually reducing the danger over time.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="compass"></i> Approach</h4>
-              <p>Designed a structured risk assessment covering 5 risk categories: Engineering, Operational, Vendor, Legal & Regulatory, and Business. Each risk is scored on a 5x5 matrix — measuring how likely it is to happen (1-5) multiplied by how much damage it could cause (1-5) — giving a score from 1 to 25. Risks are auto-classified into 5 severity levels (Critical, High, Medium, Low, Negligible) and assigned to a named owner with a plan and target date to address them.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="lock"></i> Safeguards Put in Place</h4>
-              <ul>
-                <li>Role-based access control (who can see and do what) with 4 levels and segregation of duties (no one person can both submit and approve)</li>
-                <li>Per-risk tracking with an assigned owner, due dates, and residual risk calculation (the remaining risk after safeguards are applied)</li>
-                <li>Weekly automated reminders for any risk not reviewed in 90+ days — preventing risks from going stale</li>
-                <li>A visual 5x5 heat map showing all risks by severity — for quick executive and auditor review</li>
-              </ul>
-            </div>
-            <div class="case-study__block case-study__block--outcome">
-              <h4><i data-lucide="check-circle"></i> Outcome</h4>
-              <p>Established a structured risk register with 18 identified risks across all 5 categories. Each risk has a named owner, documented action plan, and residual risk tracking. Automated weekly reviews ensure no risk goes stale. The visual heat map gives auditors and leadership clear visibility into the platform's risk posture — moving risk management from reactive audit findings to proactive, scored, and tracked governance.</p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <!-- Case Study 2 -->
-        <div class="case-study glass-card case-study--accordion" data-reveal>
-          <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
-            <span class="case-study__number">02</span>
-            <div>
-              <h3 class="case-study__title">ISO 27001 & SOC 2 Gap Assessment for SaaS Platform</h3>
-              <div class="case-study__tags">
-                <span>ISO 27001</span>
-                <span>SOC 2</span>
-                <span>Gap Analysis</span>
-              </div>
-            </div>
-            <i data-lucide="chevron-down" class="case-study__toggle"></i>
-          </div>
-          <div class="case-study__body">
-          <div class="case-study__grid">
-            <div class="case-study__block">
-              <h4><i data-lucide="info"></i> Context</h4>
-              <p>A SaaS platform managing 434 security controls across 12 compliance frameworks needed a way to find compliance weaknesses before external auditors did. Controls (specific security rules or safeguards) were tracked across ISO 27001, SOC 2, GDPR, HIPAA, and 8 other standards — but there was no systematic way to detect gaps, rank their severity, or track fixes.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="alert-triangle"></i> Problem</h4>
-              <p>Security practices existed informally, but gaps were discovered inconsistently. Some controls were marked "implemented" without supporting evidence. Others had expired evidence or no one assigned to maintain them. These problems only surfaced during audits — when it was too late to fix them efficiently.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="compass"></i> Approach</h4>
-              <p>Designed a gap assessment methodology that detects 6 distinct gap types: Missing Implementation (control not in place), Missing Evidence (no proof it works), Partial Coverage (only partly done), Expired Evidence (proof is outdated), No Owner (nobody responsible), and No Documentation (no written procedure). Each gap is classified by severity (Critical, High, Medium, Low) and assigned to someone with a target fix date.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="shield-alert"></i> Key Gaps Found</h4>
-              <ul>
-                <li>165 controls across frameworks were "Not Implemented" — the most common gap type requiring prioritized action</li>
-                <li>163 controls were "Partially Implemented" — needing additional evidence or process completion</li>
-                <li>Controls with no assigned owner — creating accountability gaps that auditors would flag</li>
-                <li>Evidence linked to controls but past its expiry date — creating a false sense of readiness</li>
-              </ul>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="lock"></i> Remediation Delivered</h4>
-              <ul>
-                <li>Structured fix workflow: Open → In Progress → Remediated → Closed, with deadline tracking at each stage</li>
-                <li>Severity-based prioritization ensuring Critical and High gaps are addressed first</li>
-                <li>Automated notifications to the assigned person and their manager when gap status changes</li>
-                <li>Comparative assessments over time — ISO 27001 (42 gaps found) and SOC 2 (17 gaps found) run as initial baselines to measure improvement</li>
-              </ul>
-            </div>
-            <div class="case-study__block case-study__block--outcome">
-              <h4><i data-lucide="check-circle"></i> Outcome</h4>
-              <p>Established a repeatable gap assessment process across all 12 frameworks. Of 434 controls, 99 are fully implemented, 163 are partially implemented, and 165 are identified for remediation — each with assigned owners, severity classification, and tracked deadlines. Gap assessments run per-framework with comparative tracking to measure improvement over time. Auditors now receive a clear gap status report instead of discovering issues during audit.</p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <!-- Case Study 3 -->
-        <div class="case-study glass-card case-study--accordion" data-reveal>
-          <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
-            <span class="case-study__number">03</span>
-            <div>
-              <h3 class="case-study__title">Cross-Framework Control Mapping for 12 Compliance Standards</h3>
-              <div class="case-study__tags">
-                <span>Control Mapping</span>
-                <span>Multi-Framework</span>
-                <span>175 Mappings</span>
-              </div>
-            </div>
-            <i data-lucide="chevron-down" class="case-study__toggle"></i>
-          </div>
-          <div class="case-study__body">
-          <div class="case-study__grid">
-            <div class="case-study__block">
-              <h4><i data-lucide="info"></i> Context</h4>
-              <p>A SaaS platform certified across 12 frameworks was managing 434 security controls independently per framework. Each framework had its own tracking, evidence collection, and audit preparation — creating massive duplication of effort. Think of it like maintaining 12 separate to-do lists that overlap significantly, but nobody knows which items are shared.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="alert-triangle"></i> Problem</h4>
-              <p>A single security requirement (like "control who can access the system") appeared as separate tasks for ISO 27001, SOC 2, GDPR, and HIPAA. Evidence was being collected multiple times for what was essentially the same rule. Audit preparation was slow because nothing was cross-referenced. Teams didn't know which security controls overlapped across frameworks.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="compass"></i> Approach</h4>
-              <p>Created 175 cross-framework control mappings across 5 primary frameworks (SOC 2, ISO 27001, GDPR, HIPAA, ISO 27701), classifying each link as one of three types: Equivalent (controls are essentially the same), Partial Overlap (similar but not identical scope), or Related (same topic, different specific requirements). This means one piece of evidence can now satisfy multiple frameworks at once.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="shield-alert"></i> Challenges Addressed</h4>
-              <ul>
-                <li>Controls that look different across frameworks but actually cover the same ground — mapped with the right relationship type</li>
-                <li>Same security concept described differently in different standards — normalized into a common language</li>
-                <li>Different evidence expectations per framework for the same underlying control</li>
-                <li>Static spreadsheet tracking causing version conflicts and outdated information</li>
-              </ul>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="lock"></i> Solution Design</h4>
-              <ul>
-                <li>175 bidirectional control mappings with 3 relationship types (Equivalent, Partial Overlap, Related)</li>
-                <li>Single evidence artifact serving multiple framework requirements — submit once, satisfy many</li>
-                <li>Per-framework compliance scoring so each framework's status is tracked independently while sharing common controls</li>
-                <li>Framework-pair matrix showing where frameworks overlap most and least — helping prioritize evidence collection</li>
-              </ul>
-            </div>
-            <div class="case-study__block case-study__block--outcome">
-              <h4><i data-lucide="check-circle"></i> Outcome</h4>
-              <p>Established 175 cross-framework mappings across the platform's 12 frameworks, eliminating duplicate evidence collection for overlapping controls. Each of the 434 controls now links to its framework-specific rule, associated risk, evidence, and responsible person. Audit preparation improved because auditors can see cross-framework coverage in a single view. The mapping is maintained as a living system — not a static spreadsheet.</p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <!-- Case Study 4 -->
-        <div class="case-study glass-card case-study--accordion" data-reveal>
-          <div class="case-study__header" onclick="this.parentElement.classList.toggle('case-study--open')">
-            <span class="case-study__number">04</span>
-            <div>
-              <h3 class="case-study__title">Development Lifecycle Security — Compliance by Design for SaaS Releases</h3>
-              <div class="case-study__tags">
-                <span>SDLC Governance</span>
-                <span>Compliance by Design</span>
-                <span>SaaS Platform</span>
-              </div>
-            </div>
-            <i data-lucide="chevron-down" class="case-study__toggle"></i>
-          </div>
-          <div class="case-study__body">
-          <div class="case-study__grid">
-            <div class="case-study__block">
-              <h4><i data-lucide="info"></i> Context</h4>
-              <p>A SaaS platform certified across 12 compliance frameworks ships frequent feature updates. Every release needs to meet security, privacy, and regulatory requirements — but compliance was being treated as something checked after release, not during development. Think of it like only checking if a building meets fire codes after it's already built.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="alert-triangle"></i> Problem</h4>
-              <p>No structured security review existed within the development process. Compliance checks happened after features shipped — not during development. There was no system to track which security checkpoints each release had passed or failed. Problems were discovered during audits, not during development — when they're much more expensive and disruptive to fix.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="compass"></i> Approach</h4>
-              <p>Designed a 7-phase security pipeline for the development lifecycle — with mandatory checkpoints at each stage. Each checkpoint has trigger-based assessments (data, privacy, security, regulatory, AI) that are evaluated per release. Results are tracked as pass/fail with risk ratings and grouped by release version so auditors can see the full picture.</p>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="shield-alert"></i> The 7 Security Phases</h4>
-              <ul>
-                <li><strong>Requirements:</strong> Security and privacy needs identified before development begins</li>
-                <li><strong>Design:</strong> Security built into the architecture — identifying threats and selecting the right safeguards</li>
-                <li><strong>Development:</strong> Secure coding practices verified — proper data handling, encryption, input validation</li>
-                <li><strong>Testing:</strong> Security testing confirms access controls, logging, and data handling work correctly</li>
-                <li><strong>Deployment:</strong> Formal approval and change management sign-off before going live</li>
-                <li><strong>Maintenance:</strong> Ongoing monitoring and security patches after release</li>
-                <li><strong>Decommission:</strong> Secure data disposal when features are retired</li>
-              </ul>
-            </div>
-            <div class="case-study__block">
-              <h4><i data-lucide="lock"></i> How It Works in Practice</h4>
-              <ul>
-                <li>Each platform release is logged with checkpoints across relevant phases</li>
-                <li>Each checkpoint is assessed per release — pass or fail, with risk rating and notes</li>
-                <li>Failed assessments trigger automated daily alerts so nothing gets missed</li>
-                <li>A per-release view groups all assessments so auditors can verify compliance for each version</li>
-                <li>5 trigger types (data, privacy, security, regulatory, AI) determine which checkpoints apply</li>
-              </ul>
-            </div>
-            <div class="case-study__block case-study__block--outcome">
-              <h4><i data-lucide="check-circle"></i> Outcome</h4>
-              <p>Established a fully operational security pipeline for the development lifecycle — 7 phases, mandatory checkpoints per phase, and trigger-based assessments per release. Auditors now have a per-release compliance view that satisfies SOC 2, ISO 27001, and ISO 9001 requirements for secure development and change management. Compliance shifted from a post-release problem to a built-in development gate — security by design, not by afterthought.</p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION ============ -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="graduation-cap"></i> Education</span>
-          <h2 class="section__title">Academic <span class="gradient-text">Background</span></h2>
-          <p class="section__subtitle">A foundation in technology, shaped by diverse experiences beyond the classroom.</p>
-        </div>
-
-        <div class="education__grid">
-          <div class="edu-card edu-card--wide glass-card" data-tilt data-reveal>
-            <div class="edu-card__gradient-border"></div>
-            <div class="edu-card__icon-wrap">
-              <i data-lucide="graduation-cap"></i>
-            </div>
-            <h3>Bachelor of Technology — Information Technology</h3>
-            <div class="edu-card__school">
-              <i data-lucide="building-2"></i>
-              <span>Francis Xavier Engineering College</span>
-            </div>
-            <span class="edu-card__year">Sep 2018 — Jul 2022</span>
-            <p class="edu-card__detail">
-              A technology foundation complemented by diverse extracurricular roles — bridging technical knowledge with leadership, communication, and community involvement.
-            </p>
-            <div class="edu-card__highlights">
-              <span class="edu-card__badge"><i data-lucide="cpu"></i> ML Intern</span>
-              <span class="edu-card__badge"><i data-lucide="megaphone"></i> IIT Bombay Techfest Rep</span>
-              <span class="edu-card__badge"><i data-lucide="mic"></i> Soft Skill Trainer</span>
-              <span class="edu-card__badge"><i data-lucide="heart"></i> Women's Dev Club</span>
-              <span class="edu-card__badge"><i data-lucide="globe"></i> IAENG Member</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BLOG / PUBLICATIONS ============ -->
-    <section class="section" id="blog">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="rss"></i> Blog & Newsletter</span>
-          <h2 class="section__title">My <span class="gradient-text">Writing</span></h2>
-          <p class="section__subtitle">Compliance insights, audit breakdowns, and security thinking — written to make complex topics accessible.</p>
-        </div>
-
-        <div class="blog__grid">
-          <!-- Newsletter -->
-          <div class="blog-card glass-card" data-reveal>
-            <div class="blog-card__image">
-              <div class="blog-card__image-placeholder">
-                <i data-lucide="newspaper"></i>
-              </div>
-            </div>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <span class="blog-card__category">Newsletter</span>
-                <span class="blog-card__date">
-                  <i data-lucide="calendar"></i>
-                  Ongoing
-                </span>
-              </div>
-              <h3 class="blog-card__title">The Unwritten Rules of GRC</h3>
-              <p class="blog-card__excerpt">A LinkedIn newsletter breaking down why security rules exist, how audits work in practice, and how organizations build trust through effective compliance.</p>
-              <a href="https://www.linkedin.com/newsletters/the-unwritten-rules-of-grc-7419717856528850944/" target="_blank" class="blog-card__link">
-                Subscribe on LinkedIn
-                <i data-lucide="arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Substack -->
-          <div class="blog-card glass-card" data-reveal>
-            <div class="blog-card__image">
-              <div class="blog-card__image-placeholder">
-                <i data-lucide="rss"></i>
-              </div>
-            </div>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <span class="blog-card__category">GRCNexis</span>
-                <span class="blog-card__date">
-                  <i data-lucide="calendar"></i>
-                  2025
-                </span>
-              </div>
-              <h3 class="blog-card__title">GRCNexis on Substack</h3>
-              <p class="blog-card__excerpt">Long-form articles on governance, risk, and compliance — written to make complex security frameworks understandable. From audit walkthroughs to how security safeguards are designed.</p>
-              <a href="https://grcnexis.substack.com" target="_blank" class="blog-card__link">
-                Read on Substack
-                <i data-lucide="arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <span class="section__tag"><i data-lucide="mail"></i> Contact</span>
-          <h2 class="section__title">Let's <span class="gradient-text">Connect</span></h2>
-          <p class="section__subtitle">Whether you're looking for guidance in security, compliance, or privacy — or just want to talk about governance and risk — feel free to reach out.</p>
-        </div>
-
-        <div class="contact__grid">
-          <div class="contact__form glass-card" data-reveal>
-            <h3 class="contact__form-title">Send a Message</h3>
-            <form id="contactForm" action="https://formspree.io/f/xojkbybq" method="POST">
-              <div class="form__row">
-                <div class="form__group">
-                  <label>
-                    <i data-lucide="user"></i>
-                    Name
-                  </label>
-                  <input type="text" name="name" placeholder="Your full name" required>
-                </div>
-                <div class="form__group">
-                  <label>
-                    <i data-lucide="mail"></i>
-                    Email
-                  </label>
-                  <input type="email" name="email" placeholder="your@email.com" required>
-                </div>
-              </div>
-              <div class="form__group">
-                <label>
-                  <i data-lucide="tag"></i>
-                  Subject
-                </label>
-                <select name="subject" required>
-                  <option value="" disabled selected>Select a topic</option>
-                  <option value="GRC Mentoring">GRC Mentoring</option>
-                  <option value="Compliance Consulting">Compliance Consulting</option>
-                  <option value="Audit Guidance">Audit Guidance</option>
-                  <option value="Career Advice">Career Advice</option>
-                  <option value="Collaboration">Collaboration</option>
-                  <option value="Project Documentation Request">Project Documentation Request</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="form__group">
-                <label>
-                  <i data-lucide="message-square"></i>
-                  Message
-                </label>
-                <textarea name="message" placeholder="Tell me about your question or how I can help..." rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">
-                <span>Send Message</span>
-                <i data-lucide="send"></i>
-              </button>
-            </form>
-            <div class="contact__form-status" id="formStatus"></div>
-          </div>
-
-          <div class="contact__availability glass-card" data-reveal>
-            <span class="contact__availability-dot"></span>
-            Available for mentoring, consulting, and collaboration opportunities
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__bottom">
-          <p>&copy; 2026 Shree Sathya. All rights reserved.</p>
-          <p class="footer__note">Bringing the Ocean to the Table — Empowering Compliance, One Wave at a Time.</p>
-        </div>
-      </div>
-    </footer>
-
-  </main>
+  </footer>
 
   <!-- ============ BACK TO TOP ============ -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">

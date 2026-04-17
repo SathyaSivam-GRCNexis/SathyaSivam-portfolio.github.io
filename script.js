@@ -295,25 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   allCounters.forEach(counter => counterObserver.observe(counter));
 
-  // === TIMELINE LINE FILL ===
-  const timelineFill = document.getElementById('timelineLineFill');
-  if (timelineFill) {
-    const timeline = timelineFill.closest('.timeline');
-
-    window.addEventListener('scroll', () => {
-      if (!timeline) return;
-      const rect = timeline.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const totalHeight = rect.height;
-        const scrolledPast = windowHeight - rect.top;
-        const percentage = Math.min(Math.max(scrolledPast / totalHeight, 0), 1);
-        timelineFill.style.height = (percentage * 100) + '%';
-      }
-    }, { passive: true });
-  }
-
   // === TILT EFFECT ON CARDS ===
   if (window.innerWidth > 768) {
     const tiltCards = document.querySelectorAll('[data-tilt]');

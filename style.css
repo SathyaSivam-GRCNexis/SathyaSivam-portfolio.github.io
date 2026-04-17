@@ -959,13 +959,13 @@ img { max-width: 100%; display: block; }
   gap: 14px;
   max-width: 860px;
   margin: 24px auto 0;
-  padding: 18px 22px;
+  padding: 22px 26px;
   background: linear-gradient(135deg, rgba(124, 92, 255, 0.08), rgba(56, 189, 248, 0.06));
   border: 1px solid rgba(124, 92, 255, 0.25);
   border-radius: 14px;
   font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
   text-align: left;
 }
 
@@ -974,7 +974,17 @@ img { max-width: 100%; display: block; }
   width: 20px;
   height: 20px;
   color: var(--accent-1);
-  margin-top: 2px;
+  margin-top: 4px;
+}
+
+.section__note-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section__note-body p {
+  margin: 0;
 }
 
 .section__note strong {
@@ -985,7 +995,10 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .section__note {
     font-size: 0.9rem;
-    padding: 14px 16px;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .section__note-body {
     gap: 10px;
   }
 }

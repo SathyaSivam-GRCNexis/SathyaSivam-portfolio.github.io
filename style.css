@@ -953,6 +953,43 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
+.section__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 860px;
+  margin: 24px auto 0;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.08), rgba(56, 189, 248, 0.06));
+  border: 1px solid rgba(124, 92, 255, 0.25);
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  text-align: left;
+}
+
+.section__note i {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--accent-1);
+  margin-top: 2px;
+}
+
+.section__note strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .section__note {
+    font-size: 0.9rem;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+}
+
 /* === ABOUT === */
 .about__grid {
   display: grid;

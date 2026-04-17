@@ -960,7 +960,9 @@ img { max-width: 100%; display: block; }
   color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.75;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .projects__statement p {

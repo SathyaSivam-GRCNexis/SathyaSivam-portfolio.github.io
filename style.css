@@ -990,6 +990,11 @@ img { max-width: 100%; display: block; }
 .section__note strong {
   color: var(--text-primary);
   font-weight: 600;
+  background: linear-gradient(120deg, rgba(124, 92, 255, 0.18), rgba(56, 189, 248, 0.14));
+  padding: 1px 6px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 @media (max-width: 640px) {

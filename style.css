@@ -725,6 +725,15 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 10px;
   z-index: 2;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hero__scroll-indicator:hover {
+  transform: translateX(-50%) translateY(4px);
+  opacity: 0.85;
 }
 
 .hero__scroll-mouse {
@@ -869,28 +878,24 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.5px;
 }
 
-/* === MARQUEE === */
+/* === FRAMEWORKS STRIP (static) === */
 .marquee {
-  padding: 20px 0;
+  padding: 18px 24px;
   background: rgba(255, 255, 255, 0.01);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
   position: relative;
   z-index: 1;
 }
 
-.marquee__track {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
 .marquee__content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 32px;
-  padding-right: 32px;
+  justify-content: center;
+  gap: 14px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .marquee__content span {
